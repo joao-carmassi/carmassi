@@ -39,7 +39,13 @@ export default function CarroselHeroHome({ children, className }: Props) {
   return (
     <div className={className as string}>
       <Carousel
-        plugins={[Autoplay({ delay: 5000 })]}
+        plugins={[
+          Autoplay({
+            delay: 5000,
+            stopOnMouseEnter: true,
+            stopOnInteraction: false,
+          }),
+        ]}
         opts={{ loop: true }}
         setApi={setApi}
         className='w-full '
