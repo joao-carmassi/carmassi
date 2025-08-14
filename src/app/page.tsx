@@ -1,9 +1,11 @@
+import BannerHome from '@/components/bannerHome';
+import ListaCards from '@/components/listaCards';
+
 export default function Home() {
   return (
     <main>
-      <section>
-        <h1>Hello word</h1>
-      </section>
+      <BannerHome />
+      <ListaCards />
     </main>
   );
 }

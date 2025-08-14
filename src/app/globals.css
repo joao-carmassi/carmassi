@@ -12,6 +12,32 @@
   }
 }
 
+body {
+  --sb-track-color: var(--color-muted);
+  --sb-thumb-color: var(--color-card);
+  --sb-size: 8px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 12px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
 :root {
   --background: oklch(0.9672 0.0041 271.3694);
   --foreground: oklch(0.219 0.0502 279.7259);
