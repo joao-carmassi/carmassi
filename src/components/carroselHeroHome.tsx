@@ -51,10 +51,10 @@ export default function CarroselHeroHome({ children, className }: Props) {
         className='w-full '
       >
         <CarouselContent>{children}</CarouselContent>
-        <CarouselPrevious className='top-[calc(100%+0.5rem)] translate-y-0 left-2 cursor-pointer' />
-        <CarouselNext className='top-[calc(100%+0.5rem)] translate-y-0 left-4 translate-x-full cursor-pointer' />
+        <CarouselPrevious className='hidden md:flex top-[calc(100%+0.5rem)] translate-y-0 left-2 cursor-pointer' />
+        <CarouselNext className='hidden md:flex top-[calc(100%+0.5rem)] translate-y-0 left-4 translate-x-full cursor-pointer' />
       </Carousel>
-      <div className='mt-4 flex items-center justify-end gap-2 mx-4'>
+      <div className='mt-4 flex items-center justify-center md:justify-end gap-2 mx-4'>
         {Array.from({ length: count }).map((_, index) => (
           <button
             key={index}

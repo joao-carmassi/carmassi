@@ -1,8 +1,15 @@
 import { Image } from 'lucide-react';
+import { ClassNameValue } from 'tailwind-merge';
 
-const ModeloImage = () => {
+interface Props {
+  className?: ClassNameValue;
+}
+
+const ModeloImage = ({ className }: Props) => {
   return (
-    <div className='bg-gray-800 text-white w-full aspect-square grid place-items-center'>
+    <div
+      className={`bg-gray-800 text-white w-full aspect-square grid place-items-center ${className}`}
+    >
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <Image className='group-hover:opacity-0 duration-150' />
     </div>
