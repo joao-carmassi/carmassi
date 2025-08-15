@@ -5,12 +5,14 @@ import colaresData from '@/data/colares.json';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
+const colares = colaresData.splice(0, 8);
+
 export default function Home() {
   return (
     <main>
       <BannerHome />
       <section className='flex items-center flex-col w-full mb-6'>
-        <ListaCards colares={colaresData.splice(0, 8)} />
+        <ListaCards colares={colares} />
         <Button
           asChild
           effect={'expandIcon'}

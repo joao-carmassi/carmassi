@@ -24,7 +24,7 @@ const ListaCards = ({ colares }: Props) => {
               {colar.nome}
             </p>
             <p className='text-xs'>
-              De{' '}
+              Por{' '}
               {colar.preco.toLocaleString('pt-br', {
                 style: 'currency',
                 currency: 'BRL',
