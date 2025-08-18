@@ -27,6 +27,14 @@ export default function Home() {
       </section>
       <ContainerInfoInfiniteSliderHome />
       <ContainerInfoGridFotos />
+      <section className='bg-foreground text-card '>
+        <div className='max-w-7xl mx-auto p-6 md:p-12 text-center'>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
+          soluta qui provident temporibus officia odit perferendis fugit ratione
+          commodi in numquam eligendi id magni veniam aliquam, totam itaque
+          voluptatem iste.
+        </div>
+      </section>
     </main>
   );
 }

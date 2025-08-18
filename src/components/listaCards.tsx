@@ -11,7 +11,7 @@ const ListaCards = ({ colares }: Props) => {
     <div className='grid w-full grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-12'>
       {colares.map((colar, index) => (
         <Card
-          className='group cursor-pointer duration-150 hover:scale-105 h-fit'
+          className='group cursor-pointer duration-300 hover:scale-105 h-fit'
           key={index}
         >
           <CardHeader>

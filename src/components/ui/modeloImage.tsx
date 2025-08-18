@@ -8,7 +8,7 @@ interface Props {
 const ModeloImage = ({ className }: Props) => {
   return (
     <div
-      className={`bg-gray-800 text-white w-full grid place-items-center ${className}`}
+      className={`bg-foreground text-card w-full grid place-items-center ${className}`}
     >
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <Image className='group-hover:opacity-0 duration-150' />

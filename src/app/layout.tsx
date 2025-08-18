@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/nav';
+import Footer from '@/components/footer';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${raleway.variable} font-raleway tracking-widest`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
