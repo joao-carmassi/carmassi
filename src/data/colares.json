@@ -1,22 +1,582 @@
 [
-  { "nome": "Colar Pérola Elegante", "preco": 89.9 },
-  { "nome": "Colar Coração Dourado", "preco": 59.9 },
-  { "nome": "Colar Minimalista Prata", "preco": 49.9 },
-  { "nome": "Colar Pedra Natural Azul", "preco": 79.9 },
-  { "nome": "Colar Choker de Couro", "preco": 39.9 },
-  { "nome": "Colar Mandala Boho", "preco": 69.9 },
-  { "nome": "Colar Folha Tropical", "preco": 54.9 },
-  { "nome": "Colar Lua e Estrela", "preco": 64.9 },
-  { "nome": "Colar Quartzo Rosa", "preco": 84.9 },
-  { "nome": "Colar Âncora Masculino", "preco": 45.9 },
-  { "nome": "Colar Borboleta Delicada", "preco": 52.9 },
-  { "nome": "Colar Corrente Grossa", "preco": 99.9 },
-  { "nome": "Colar Pedra Vulcânica", "preco": 74.9 },
-  { "nome": "Colar Três Pingentes", "preco": 57.9 },
-  { "nome": "Colar Olho Grego", "preco": 63.9 },
-  { "nome": "Colar Gota de Cristal", "preco": 88.9 },
-  { "nome": "Colar Inicial Personalizado", "preco": 69.9 },
-  { "nome": "Colar Estilo Vintage", "preco": 82.9 },
-  { "nome": "Colar Duplo Camadas", "preco": 77.9 },
-  { "nome": "Colar Flor Dourada", "preco": 66.9 }
+  {
+    "id": 1,
+    "nome": "Corrente Ouro 18k 1",
+    "descricao": "Corrente de ouro 18k, Design elegante para ocasiões especiais.",
+    "preco": 527.31,
+    "moeda": "BRL",
+    "nota": 4.3,
+    "avaliacoes": 484,
+    "categoria": "Correntes Femininas",
+    "caracteristicas": {
+      "material": "Ouro 18k",
+      "peso": "12g",
+      "comprimento": "60cm",
+      "espessura": "3mm",
+      "fecho": "Imã"
+    },
+    "estoque": 33,
+    "imagens": [
+      "https://meusite.com/produtos/corrente1-frente.jpg",
+      "https://meusite.com/produtos/corrente1-detalhe.jpg"
+    ],
+    "tags": ["ouro 18k", "joia", "acessório", "femininas"],
+    "promocao": {
+      "desconto": 10,
+      "precoPromocional": 474.58,
+      "validade": "2025-09-19"
+    },
+    "dataCadastro": "2025-01-07T16:48:34.689001"
+  },
+  {
+    "id": 2,
+    "nome": "Corrente Titânio 2",
+    "descricao": "Corrente de titânio, Acabamento polido, ideal para uso diário.",
+    "preco": 404.37,
+    "moeda": "BRL",
+    "nota": 4.0,
+    "avaliacoes": 378,
+    "categoria": "Correntes Masculinas",
+    "caracteristicas": {
+      "material": "Titânio",
+      "peso": "32g",
+      "comprimento": "65cm",
+      "espessura": "2mm",
+      "fecho": "Imã"
+    },
+    "estoque": 36,
+    "imagens": [
+      "https://meusite.com/produtos/corrente2-frente.jpg",
+      "https://meusite.com/produtos/corrente2-detalhe.jpg"
+    ],
+    "tags": ["masculinas", "joia", "corrente", "titânio"],
+    "promocao": {
+      "desconto": 0,
+      "precoPromocional": null,
+      "validade": null
+    },
+    "dataCadastro": "2023-02-23T18:33:51.390176"
+  },
+  {
+    "id": 3,
+    "nome": "Corrente Prata 925 3",
+    "descricao": "Corrente de prata 925, Modelo resistente e durável.",
+    "preco": 923.37,
+    "moeda": "BRL",
+    "nota": 4.0,
+    "avaliacoes": 108,
+    "categoria": "Correntes Unissex",
+    "caracteristicas": {
+      "material": "Prata 925",
+      "peso": "14g",
+      "comprimento": "55cm",
+      "espessura": "2mm",
+      "fecho": "Imã"
+    },
+    "estoque": 7,
+    "imagens": [
+      "https://meusite.com/produtos/corrente3-frente.jpg",
+      "https://meusite.com/produtos/corrente3-detalhe.jpg"
+    ],
+    "tags": ["unissex", "joia", "acessório", "prata 925"],
+    "promocao": {
+      "desconto": 20,
+      "precoPromocional": 738.7,
+      "validade": "2025-10-17"
+    },
+    "dataCadastro": "2025-05-06T07:06:43.516860"
+  },
+  {
+    "id": 4,
+    "nome": "Corrente Aço Inox 4",
+    "descricao": "Corrente de aço inox, Acabamento polido, ideal para uso diário.",
+    "preco": 344.1,
+    "moeda": "BRL",
+    "nota": 3.5,
+    "avaliacoes": 65,
+    "categoria": "Correntes Unissex",
+    "caracteristicas": {
+      "material": "Aço Inox",
+      "peso": "55g",
+      "comprimento": "65cm",
+      "espessura": "5mm",
+      "fecho": "Imã"
+    },
+    "estoque": 20,
+    "imagens": [
+      "https://meusite.com/produtos/corrente4-frente.jpg",
+      "https://meusite.com/produtos/corrente4-detalhe.jpg"
+    ],
+    "tags": ["unissex", "joia", "moda", "aço inox"],
+    "promocao": {
+      "desconto": 15,
+      "precoPromocional": 292.49,
+      "validade": "2025-09-17"
+    },
+    "dataCadastro": "2023-06-11T11:37:13.003536"
+  },
+  {
+    "id": 5,
+    "nome": "Corrente Couro 5",
+    "descricao": "Corrente de couro, Leve e confortável para o dia a dia.",
+    "preco": 307.1,
+    "moeda": "BRL",
+    "nota": 3.7,
+    "avaliacoes": 367,
+    "categoria": "Correntes Femininas",
+    "caracteristicas": {
+      "material": "Couro",
+      "peso": "52g",
+      "comprimento": "70cm",
+      "espessura": "4mm",
+      "fecho": "Mola"
+    },
+    "estoque": 11,
+    "imagens": [
+      "https://meusite.com/produtos/corrente5-frente.jpg",
+      "https://meusite.com/produtos/corrente5-detalhe.jpg"
+    ],
+    "tags": ["acessório", "couro", "femininas", "corrente"],
+    "promocao": {
+      "desconto": 20,
+      "precoPromocional": 245.68,
+      "validade": "2025-09-08"
+    },
+    "dataCadastro": "2024-05-08T23:07:17.582216"
+  },
+  {
+    "id": 6,
+    "nome": "Corrente Ouro 18k 6",
+    "descricao": "Corrente de ouro 18k, Acabamento premium com brilho intenso.",
+    "preco": 567.53,
+    "moeda": "BRL",
+    "nota": 4.9,
+    "avaliacoes": 234,
+    "categoria": "Correntes Masculinas",
+    "caracteristicas": {
+      "material": "Ouro 18k",
+      "peso": "27g",
+      "comprimento": "60cm",
+      "espessura": "4mm",
+      "fecho": "Mola"
+    },
+    "estoque": 12,
+    "imagens": [
+      "https://meusite.com/produtos/corrente6-frente.jpg",
+      "https://meusite.com/produtos/corrente6-detalhe.jpg"
+    ],
+    "tags": ["ouro 18k", "masculinas", "moda", "corrente"],
+    "promocao": {
+      "desconto": 15,
+      "precoPromocional": 482.4,
+      "validade": "2025-10-13"
+    },
+    "dataCadastro": "2023-02-14T14:55:45.981215"
+  },
+  {
+    "id": 7,
+    "nome": "Corrente Titânio 7",
+    "descricao": "Corrente de titânio, Leve e confortável para o dia a dia.",
+    "preco": 244.8,
+    "moeda": "BRL",
+    "nota": 4.8,
+    "avaliacoes": 396,
+    "categoria": "Correntes Unissex",
+    "caracteristicas": {
+      "material": "Titânio",
+      "peso": "45g",
+      "comprimento": "45cm",
+      "espessura": "6mm",
+      "fecho": "Imã"
+    },
+    "estoque": 37,
+    "imagens": [
+      "https://meusite.com/produtos/corrente7-frente.jpg",
+      "https://meusite.com/produtos/corrente7-detalhe.jpg"
+    ],
+    "tags": ["unissex", "acessório", "corrente", "titânio"],
+    "promocao": {
+      "desconto": 0,
+      "precoPromocional": null,
+      "validade": null
+    },
+    "dataCadastro": "2023-06-01T15:05:15.328389"
+  },
+  {
+    "id": 8,
+    "nome": "Corrente Prata 925 8",
+    "descricao": "Corrente de prata 925, Acabamento polido, ideal para uso diário.",
+    "preco": 861.42,
+    "moeda": "BRL",
+    "nota": 4.5,
+    "avaliacoes": 123,
+    "categoria": "Correntes Masculinas",
+    "caracteristicas": {
+      "material": "Prata 925",
+      "peso": "48g",
+      "comprimento": "65cm",
+      "espessura": "2mm",
+      "fecho": "Mola"
+    },
+    "estoque": 1,
+    "imagens": [
+      "https://meusite.com/produtos/corrente8-frente.jpg",
+      "https://meusite.com/produtos/corrente8-detalhe.jpg"
+    ],
+    "tags": ["masculinas", "acessório", "moda", "prata 925"],
+    "promocao": {
+      "desconto": 20,
+      "precoPromocional": 689.14,
+      "validade": "2025-10-10"
+    },
+    "dataCadastro": "2024-02-10T20:16:55.243387"
+  },
+  {
+    "id": 9,
+    "nome": "Corrente Prata 925 9",
+    "descricao": "Corrente de prata 925, Design elegante para ocasiões especiais.",
+    "preco": 568.48,
+    "moeda": "BRL",
+    "nota": 3.7,
+    "avaliacoes": 111,
+    "categoria": "Correntes Masculinas",
+    "caracteristicas": {
+      "material": "Prata 925",
+      "peso": "16g",
+      "comprimento": "55cm",
+      "espessura": "4mm",
+      "fecho": "Lagosta"
+    },
+    "estoque": 8,
+    "imagens": [
+      "https://meusite.com/produtos/corrente9-frente.jpg",
+      "https://meusite.com/produtos/corrente9-detalhe.jpg"
+    ],
+    "tags": ["masculinas", "moda", "corrente", "prata 925"],
+    "promocao": {
+      "desconto": 5,
+      "precoPromocional": 540.06,
+      "validade": "2025-09-30"
+    },
+    "dataCadastro": "2023-04-30T06:05:35.121182"
+  },
+  {
+    "id": 10,
+    "nome": "Corrente Ouro 18k 10",
+    "descricao": "Corrente de ouro 18k, Modelo resistente e durável.",
+    "preco": 159.84,
+    "moeda": "BRL",
+    "nota": 4.9,
+    "avaliacoes": 313,
+    "categoria": "Correntes Masculinas",
+    "caracteristicas": {
+      "material": "Ouro 18k",
+      "peso": "22g",
+      "comprimento": "45cm",
+      "espessura": "3mm",
+      "fecho": "Lagosta"
+    },
+    "estoque": 26,
+    "imagens": [
+      "https://meusite.com/produtos/corrente10-frente.jpg",
+      "https://meusite.com/produtos/corrente10-detalhe.jpg"
+    ],
+    "tags": ["ouro 18k", "masculinas", "moda", "corrente"],
+    "promocao": {
+      "desconto": 0,
+      "precoPromocional": null,
+      "validade": null
+    },
+    "dataCadastro": "2024-03-08T11:23:24.667753"
+  },
+  {
+    "id": 11,
+    "nome": "Corrente Titânio 11",
+    "descricao": "Corrente de titânio, Acabamento polido, ideal para uso diário.",
+    "preco": 467.76,
+    "moeda": "BRL",
+    "nota": 4.4,
+    "avaliacoes": 302,
+    "categoria": "Correntes Femininas",
+    "caracteristicas": {
+      "material": "Titânio",
+      "peso": "57g",
+      "comprimento": "70cm",
+      "espessura": "4mm",
+      "fecho": "Lagosta"
+    },
+    "estoque": 15,
+    "imagens": [
+      "https://meusite.com/produtos/corrente11-frente.jpg",
+      "https://meusite.com/produtos/corrente11-detalhe.jpg"
+    ],
+    "tags": ["joia", "corrente", "femininas", "titânio"],
+    "promocao": {
+      "desconto": 15,
+      "precoPromocional": 397.6,
+      "validade": "2025-08-24"
+    },
+    "dataCadastro": "2024-08-17T18:26:50.652470"
+  },
+  {
+    "id": 12,
+    "nome": "Corrente Aço Inox 12",
+    "descricao": "Corrente de aço inox, Acabamento premium com brilho intenso.",
+    "preco": 915.0,
+    "moeda": "BRL",
+    "nota": 3.7,
+    "avaliacoes": 249,
+    "categoria": "Correntes Femininas",
+    "caracteristicas": {
+      "material": "Aço Inox",
+      "peso": "44g",
+      "comprimento": "60cm",
+      "espessura": "5mm",
+      "fecho": "Gancho"
+    },
+    "estoque": 31,
+    "imagens": [
+      "https://meusite.com/produtos/corrente12-frente.jpg",
+      "https://meusite.com/produtos/corrente12-detalhe.jpg"
+    ],
+    "tags": ["acessório", "femininas", "aço inox", "corrente"],
+    "promocao": {
+      "desconto": 0,
+      "precoPromocional": null,
+      "validade": null
+    },
+    "dataCadastro": "2025-05-29T05:43:17.266497"
+  },
+  {
+    "id": 13,
+    "nome": "Corrente Couro 13",
+    "descricao": "Corrente de couro, Acabamento premium com brilho intenso.",
+    "preco": 428.62,
+    "moeda": "BRL",
+    "nota": 4.4,
+    "avaliacoes": 457,
+    "categoria": "Correntes Femininas",
+    "caracteristicas": {
+      "material": "Couro",
+      "peso": "43g",
+      "comprimento": "50cm",
+      "espessura": "5mm",
+      "fecho": "Lagosta"
+    },
+    "estoque": 32,
+    "imagens": [
+      "https://meusite.com/produtos/corrente13-frente.jpg",
+      "https://meusite.com/produtos/corrente13-detalhe.jpg"
+    ],
+    "tags": ["acessório", "couro", "moda", "femininas"],
+    "promocao": {
+      "desconto": 5,
+      "precoPromocional": 407.19,
+      "validade": "2025-09-10"
+    },
+    "dataCadastro": "2023-09-08T14:40:08.777681"
+  },
+  {
+    "id": 14,
+    "nome": "Corrente Couro 14",
+    "descricao": "Corrente de couro, Design elegante para ocasiões especiais.",
+    "preco": 524.03,
+    "moeda": "BRL",
+    "nota": 4.9,
+    "avaliacoes": 491,
+    "categoria": "Correntes Masculinas",
+    "caracteristicas": {
+      "material": "Couro",
+      "peso": "45g",
+      "comprimento": "65cm",
+      "espessura": "6mm",
+      "fecho": "Gancho"
+    },
+    "estoque": 6,
+    "imagens": [
+      "https://meusite.com/produtos/corrente14-frente.jpg",
+      "https://meusite.com/produtos/corrente14-detalhe.jpg"
+    ],
+    "tags": ["masculinas", "joia", "couro", "corrente"],
+    "promocao": {
+      "desconto": 5,
+      "precoPromocional": 497.83,
+      "validade": "2025-09-16"
+    },
+    "dataCadastro": "2024-12-29T02:55:25.508448"
+  },
+  {
+    "id": 15,
+    "nome": "Corrente Titânio 15",
+    "descricao": "Corrente de titânio, Acabamento premium com brilho intenso.",
+    "preco": 468.44,
+    "moeda": "BRL",
+    "nota": 3.6,
+    "avaliacoes": 429,
+    "categoria": "Correntes Masculinas",
+    "caracteristicas": {
+      "material": "Titânio",
+      "peso": "54g",
+      "comprimento": "65cm",
+      "espessura": "6mm",
+      "fecho": "Mola"
+    },
+    "estoque": 21,
+    "imagens": [
+      "https://meusite.com/produtos/corrente15-frente.jpg",
+      "https://meusite.com/produtos/corrente15-detalhe.jpg"
+    ],
+    "tags": ["masculinas", "acessório", "moda", "titânio"],
+    "promocao": {
+      "desconto": 20,
+      "precoPromocional": 374.75,
+      "validade": "2025-08-25"
+    },
+    "dataCadastro": "2024-08-20T05:18:20.963448"
+  },
+  {
+    "id": 16,
+    "nome": "Corrente Titânio 16",
+    "descricao": "Corrente de titânio, Acabamento polido, ideal para uso diário.",
+    "preco": 830.33,
+    "moeda": "BRL",
+    "nota": 4.8,
+    "avaliacoes": 22,
+    "categoria": "Correntes Masculinas",
+    "caracteristicas": {
+      "material": "Titânio",
+      "peso": "48g",
+      "comprimento": "55cm",
+      "espessura": "5mm",
+      "fecho": "Lagosta"
+    },
+    "estoque": 3,
+    "imagens": [
+      "https://meusite.com/produtos/corrente16-frente.jpg",
+      "https://meusite.com/produtos/corrente16-detalhe.jpg"
+    ],
+    "tags": ["masculinas", "moda", "corrente", "titânio"],
+    "promocao": {
+      "desconto": 20,
+      "precoPromocional": 664.26,
+      "validade": "2025-09-24"
+    },
+    "dataCadastro": "2023-08-13T08:11:54.604668"
+  },
+  {
+    "id": 17,
+    "nome": "Corrente Prata 925 17",
+    "descricao": "Corrente de prata 925, Modelo resistente e durável.",
+    "preco": 761.43,
+    "moeda": "BRL",
+    "nota": 3.7,
+    "avaliacoes": 31,
+    "categoria": "Correntes Masculinas",
+    "caracteristicas": {
+      "material": "Prata 925",
+      "peso": "31g",
+      "comprimento": "50cm",
+      "espessura": "4mm",
+      "fecho": "Mola"
+    },
+    "estoque": 34,
+    "imagens": [
+      "https://meusite.com/produtos/corrente17-frente.jpg",
+      "https://meusite.com/produtos/corrente17-detalhe.jpg"
+    ],
+    "tags": ["masculinas", "joia", "moda", "prata 925"],
+    "promocao": {
+      "desconto": 0,
+      "precoPromocional": null,
+      "validade": null
+    },
+    "dataCadastro": "2023-09-02T08:27:03.542126"
+  },
+  {
+    "id": 18,
+    "nome": "Corrente Ouro 18k 18",
+    "descricao": "Corrente de ouro 18k, Modelo resistente e durável.",
+    "preco": 731.53,
+    "moeda": "BRL",
+    "nota": 4.2,
+    "avaliacoes": 346,
+    "categoria": "Correntes Femininas",
+    "caracteristicas": {
+      "material": "Ouro 18k",
+      "peso": "35g",
+      "comprimento": "60cm",
+      "espessura": "3mm",
+      "fecho": "Lagosta"
+    },
+    "estoque": 13,
+    "imagens": [
+      "https://meusite.com/produtos/corrente18-frente.jpg",
+      "https://meusite.com/produtos/corrente18-detalhe.jpg"
+    ],
+    "tags": ["ouro 18k", "acessório", "moda", "femininas"],
+    "promocao": {
+      "desconto": 20,
+      "precoPromocional": 585.22,
+      "validade": "2025-09-20"
+    },
+    "dataCadastro": "2024-11-25T15:22:04.569631"
+  },
+  {
+    "id": 19,
+    "nome": "Corrente Ouro 18k 19",
+    "descricao": "Corrente de ouro 18k, Acabamento premium com brilho intenso.",
+    "preco": 182.73,
+    "moeda": "BRL",
+    "nota": 4.9,
+    "avaliacoes": 83,
+    "categoria": "Correntes Masculinas",
+    "caracteristicas": {
+      "material": "Ouro 18k",
+      "peso": "34g",
+      "comprimento": "45cm",
+      "espessura": "4mm",
+      "fecho": "Mola"
+    },
+    "estoque": 7,
+    "imagens": [
+      "https://meusite.com/produtos/corrente19-frente.jpg",
+      "https://meusite.com/produtos/corrente19-detalhe.jpg"
+    ],
+    "tags": ["ouro 18k", "acessório", "joia", "masculinas"],
+    "promocao": {
+      "desconto": 0,
+      "precoPromocional": null,
+      "validade": null
+    },
+    "dataCadastro": "2023-09-01T14:46:01.734836"
+  },
+  {
+    "id": 20,
+    "nome": "Corrente Aço Inox 20",
+    "descricao": "Corrente de aço inox, Acabamento polido, ideal para uso diário.",
+    "preco": 881.96,
+    "moeda": "BRL",
+    "nota": 5.0,
+    "avaliacoes": 124,
+    "categoria": "Correntes Unissex",
+    "caracteristicas": {
+      "material": "Aço Inox",
+      "peso": "26g",
+      "comprimento": "50cm",
+      "espessura": "3mm",
+      "fecho": "Imã"
+    },
+    "estoque": 44,
+    "imagens": [
+      "https://meusite.com/produtos/corrente20-frente.jpg",
+      "https://meusite.com/produtos/corrente20-detalhe.jpg"
+    ],
+    "tags": ["unissex", "joia", "acessório", "aço inox"],
+    "promocao": {
+      "desconto": 20,
+      "precoPromocional": 705.57,
+      "validade": "2025-08-19"
+    },
+    "dataCadastro": "2023-09-13T21:21:02.073154"
+  }
 ]

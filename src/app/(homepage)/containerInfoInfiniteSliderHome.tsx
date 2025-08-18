@@ -29,6 +29,7 @@ const ContainerInfoInfiniteSliderHome = () => {
       </div>
       <div className='flex-1 flex flex-col md:flex-row gap-3 overflow-hidden max-h-[37.5rem]'>
         <InfiniteSlider
+          speedOnHover={15}
           speed={50}
           className='w-full h-full'
           direction={isMobile ? 'horizontal' : 'vertical'}
@@ -41,6 +42,7 @@ const ContainerInfoInfiniteSliderHome = () => {
           ))}
         </InfiniteSlider>
         <InfiniteSlider
+          speedOnHover={15}
           speed={50}
           className='w-full h-full'
           direction={isMobile ? 'horizontal' : 'vertical'}

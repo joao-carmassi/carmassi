@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
   experimental: {
     viewTransition: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'thumbs.dreamstime.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

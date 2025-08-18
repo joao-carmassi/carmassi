@@ -1,6 +1,9 @@
+import { unstable_ViewTransition as ViewTransition } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { IColaresData } from '@/types/iColaresData';
 import ModeloImage from './ui/modeloImage';
+import Link from 'next/link';
+import slugify from 'slugify';
 
 type Props = {
   colares: IColaresData;
@@ -10,27 +13,46 @@ const ListaCards = ({ colares }: Props) => {
   return (
     <div className='grid w-full grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-12'>
       {colares.map((colar, index) => (
-        <Card
-          className='group cursor-pointer duration-300 hover:scale-105 h-fit'
+        <Link
           key={index}
+          href={`/produtos/${slugify(colar.nome, {
+            strict: true,
+            lower: true,
+          })}`}
         >
-          <CardHeader>
-            <ModeloImage className='aspect-square' />
-          </CardHeader>
-          <CardContent className='flex flex-col gap-2'>
-            <p className='group-hover:underline text-sm md:text-base'>
-              {colar.nome}
-            </p>
-            <p className='text-xs'>
-              Por{' '}
-              {colar.preco.toLocaleString('pt-br', {
-                style: 'currency',
-                currency: 'BRL',
-              })}{' '}
-              BRL
-            </p>
-          </CardContent>
-        </Card>
+          <Card className='group cursor-pointer duration-300 hover:scale-105 h-fit'>
+            <CardHeader>
+              <ViewTransition
+                name={`imagem-${slugify(colar.nome, {
+                  strict: true,
+                  lower: true,
+                })}`}
+              >
+                <ModeloImage className='aspect-square' />
+              </ViewTransition>
+            </CardHeader>
+            <CardContent className='flex flex-col gap-2'>
+              <ViewTransition
+                name={`titulo-${slugify(colar.nome, {
+                  strict: true,
+                  lower: true,
+                })}`}
+              >
+                <p className='group-hover:underline text-sm md:text-base'>
+                  {colar.nome}
+                </p>
+              </ViewTransition>
+              <p className='text-xs'>
+                Por{' '}
+                {colar.preco.toLocaleString('pt-br', {
+                  style: 'currency',
+                  currency: colar.moeda,
+                })}{' '}
+                {colar.moeda}
+              </p>
+            </CardContent>
+          </Card>
+        </Link>
       ))}
     </div>
   );
