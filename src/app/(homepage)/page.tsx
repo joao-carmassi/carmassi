@@ -8,11 +8,11 @@ import ContainerInfoInfiniteSliderHome from './containerInfoInfiniteSliderHome';
 import ContainerInfoGridFotos from './containerInfoGridFotos';
 import { H2 } from '@/components/ui/h2';
 
-const colares = colaresData.splice(0, 8);
+const colares = colaresData.slice(0, 8);
 
 export default function Home() {
   return (
-    <main>
+    <main className='min-h-screen'>
       <ContainerBannerHome />
       <section className='flex items-center flex-col max-w-7xl mx-auto p-6 md:p-12 gap-6'>
         <ListaCards colares={colares} />

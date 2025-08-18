@@ -1,8 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Logo } from './logo';
-import { NavMenu } from './nav-menu';
-import { NavigationSheet } from './navigation-sheet';
 import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -10,21 +9,20 @@ const Navbar = () => {
       <nav className='h-16 bg-card border-b'>
         <div className='h-full flex items-center justify-between max-w-7xl mx-auto px-6 md:px-12'>
           <div className='flex items-center gap-8'>
-            <Logo />
+            <Link href={'/'}>
+              <Logo />
+            </Link>
 
             {/* Desktop Menu */}
-            <NavMenu className='hidden md:block' />
+            <Button variant={'outline'} className='asChild'>
+              <Link href={'/produtos'}>Produtos</Link>
+            </Button>
           </div>
 
           <div className='flex items-center gap-3'>
             <Button>
               Get Started <ArrowUpRight />
             </Button>
-
-            {/* Mobile Menu */}
-            <div className='md:hidden'>
-              <NavigationSheet />
-            </div>
           </div>
         </div>
       </nav>

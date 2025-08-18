@@ -1,9 +1,15 @@
 import { unstable_ViewTransition as ViewTransition } from 'react';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+} from '@/components/ui/card';
 import { IColaresData } from '@/types/iColaresData';
 import ModeloImage from './ui/modeloImage';
 import Link from 'next/link';
 import slugify from 'slugify';
+import { Badge } from './ui/badge';
 
 type Props = {
   colares: IColaresData;
@@ -22,16 +28,30 @@ const ListaCards = ({ colares }: Props) => {
         >
           <Card className='group cursor-pointer duration-300 hover:scale-105 h-fit'>
             <CardHeader>
+              <CardDescription>
+                <ViewTransition
+                  name={`imagem-${slugify(colar.nome, {
+                    strict: true,
+                    lower: true,
+                  })}`}
+                >
+                  <ModeloImage className='aspect-square' />
+                </ViewTransition>
+              </CardDescription>
+            </CardHeader>
+            <CardContent className='flex flex-col gap-2'>
               <ViewTransition
-                name={`imagem-${slugify(colar.nome, {
+                name={`tags-${slugify(colar.nome, {
                   strict: true,
                   lower: true,
                 })}`}
               >
-                <ModeloImage className='aspect-square' />
+                <div className='flex gap-1 flex-wrap'>
+                  {colar.tags.slice(0, 3).map((tag) => (
+                    <Badge key={tag}>{tag}</Badge>
+                  ))}
+                </div>
               </ViewTransition>
-            </CardHeader>
-            <CardContent className='flex flex-col gap-2'>
               <ViewTransition
                 name={`titulo-${slugify(colar.nome, {
                   strict: true,
