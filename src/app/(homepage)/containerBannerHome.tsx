@@ -2,7 +2,7 @@ import CarroselHeroHome from '@/components/carroselHeroHome';
 import { CarouselItem } from '@/components/ui/carousel';
 import { Image } from 'lucide-react';
 
-const BannerHome = () => {
+const ContainerBannerHome = () => {
   return (
     <section className=''>
       <CarroselHeroHome className='pb-4'>
@@ -19,4 +19,4 @@ const BannerHome = () => {
   );
 };
 
-export default BannerHome;
+export default ContainerBannerHome;

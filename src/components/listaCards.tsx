@@ -15,7 +15,7 @@ const ListaCards = ({ colares }: Props) => {
           key={index}
         >
           <CardHeader>
-            <ModeloImage />
+            <ModeloImage className='aspect-square' />
           </CardHeader>
           <CardContent className='flex flex-col gap-2'>
             <p className='group-hover:underline text-sm md:text-base'>

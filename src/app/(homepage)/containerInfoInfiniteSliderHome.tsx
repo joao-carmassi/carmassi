@@ -1,13 +1,13 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
 import { H2 } from '@/components/ui/h2';
 import { H3 } from '@/components/ui/h3';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import ModeloImage from '@/components/ui/modeloImage';
-import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
 
-const InfoInfiniteSliderHome = () => {
+const ContainerInfoInfiniteSliderHome = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -34,7 +34,10 @@ const InfoInfiniteSliderHome = () => {
           direction={isMobile ? 'horizontal' : 'vertical'}
         >
           {Array.from({ length: 10 }).map((_, index) => (
-            <ModeloImage className='h-36 md:h-fit md:w-full' key={index} />
+            <ModeloImage
+              className='aspect-square h-36 md:h-fit md:w-full'
+              key={index}
+            />
           ))}
         </InfiniteSlider>
         <InfiniteSlider
@@ -44,7 +47,10 @@ const InfoInfiniteSliderHome = () => {
           reverse
         >
           {Array.from({ length: 10 }).map((_, index) => (
-            <ModeloImage className='h-36 md:h-fit md:w-full' key={index} />
+            <ModeloImage
+              className='aspect-square h-36 md:h-fit md:w-full'
+              key={index}
+            />
           ))}
         </InfiniteSlider>
       </div>
@@ -52,4 +58,4 @@ const InfoInfiniteSliderHome = () => {
   );
 };
 
-export default InfoInfiniteSliderHome;
+export default ContainerInfoInfiniteSliderHome;
