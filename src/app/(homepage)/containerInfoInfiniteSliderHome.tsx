@@ -1,22 +1,9 @@
-'use client';
-
 import { Button } from '@/components/ui/button';
 import { H2 } from '@/components/ui/h2';
-import { InfiniteSlider } from '@/components/ui/infinite-slider';
-import ModeloImage from '@/components/ui/modeloImage';
 import { P } from '@/components/ui/p';
-import { useEffect, useState } from 'react';
+import InfiniteSliderScreenVerifier from './infiniteSliderScreenVerifier';
 
 const ContainerInfoInfiniteSliderHome = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkScreen = () => setIsMobile(window.innerWidth < 768);
-    checkScreen();
-    window.addEventListener('resize', checkScreen);
-    return () => window.removeEventListener('resize', checkScreen);
-  }, []);
-
   return (
     <section className='p-6 md:p-12 gap-6 md:gap-12 max-w-7xl mx-auto flex items-center flex-col md:flex-row-reverse'>
       <div className='flex-1 flex flex-col gap-6 items-start'>
@@ -28,33 +15,7 @@ const ContainerInfoInfiniteSliderHome = () => {
         <Button effect={'ringHover'}>Lorem</Button>
       </div>
       <div className='flex-1 flex flex-col md:flex-row gap-3 overflow-hidden max-h-[37.5rem]'>
-        <InfiniteSlider
-          speedOnHover={15}
-          speed={50}
-          className='w-full h-full'
-          direction={isMobile ? 'horizontal' : 'vertical'}
-        >
-          {Array.from({ length: 10 }).map((_, index) => (
-            <ModeloImage
-              className='aspect-square h-36 md:h-fit md:w-full'
-              key={index}
-            />
-          ))}
-        </InfiniteSlider>
-        <InfiniteSlider
-          speedOnHover={15}
-          speed={50}
-          className='w-full h-full'
-          direction={isMobile ? 'horizontal' : 'vertical'}
-          reverse
-        >
-          {Array.from({ length: 10 }).map((_, index) => (
-            <ModeloImage
-              className='aspect-square h-36 md:h-fit md:w-full'
-              key={index}
-            />
-          ))}
-        </InfiniteSlider>
+        <InfiniteSliderScreenVerifier />
       </div>
     </section>
   );

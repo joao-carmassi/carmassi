@@ -46,14 +46,16 @@ const ListaCards = ({ colares }: Props) => {
                   {colar.nome}
                 </p>
               </ViewTransition>
-              <p className='text-xs'>
-                Por{' '}
-                {colar.preco.toLocaleString('pt-br', {
-                  style: 'currency',
-                  currency: colar.moeda,
-                })}{' '}
-                {colar.moeda}
-              </p>
+              <ViewTransition name={`valor-${colar.id}`}>
+                <p className='text-xs'>
+                  Por{' '}
+                  {colar.preco.toLocaleString('pt-br', {
+                    style: 'currency',
+                    currency: colar.moeda,
+                  })}{' '}
+                  {colar.moeda}
+                </p>
+              </ViewTransition>
             </CardContent>
           </Card>
         </Link>

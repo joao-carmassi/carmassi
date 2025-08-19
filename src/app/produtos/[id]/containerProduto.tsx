@@ -1,66 +1,58 @@
 import { H1 } from '@/components/ui/h1';
-import ModeloImage from '@/components/ui/modeloImage';
 import { unstable_ViewTransition as ViewTransition } from 'react';
 import { P } from '@/components/ui/p';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Rating, RatingButton } from '@/components/ui/kibo-ui/rating';
-import { CarroselPaginaProduto } from './carroselPaginaProduto';
 import { IColaresData } from '@/app/layout';
+import ColagemImagensProdutos from './colagemImagensProdutos';
 
 interface Props {
   colar: IColaresData;
-  id: string;
 }
 
-const ContainerProduto = ({ colar, id }: Props) => {
+const ContainerProduto = ({ colar }: Props) => {
   return (
     <section className='mx-auto max-w-7xl p-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12'>
-      <div className='flex-1 hidden md:grid grid-cols-2 gap-3'>
-        <ViewTransition name={`imagem-${id}`}>
-          <ModeloImage className='aspect-[9/12] col-span-2' />
-        </ViewTransition>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <ModeloImage key={index} className='aspect-square' />
-        ))}
-      </div>
-      <div className='md:hidden w-full'>
-        <CarroselPaginaProduto />
-      </div>
+      <ColagemImagensProdutos colar={colar} />
+
       <div className='flex-1 flex flex-col gap-2 sticky top-6 self-start'>
-        <ViewTransition name={`titulo-${id}`}>
+        <ViewTransition name={`titulo-${colar.id}`}>
           <H1>
             {colar?.nome} - {colar?.categoria}
           </H1>
         </ViewTransition>
-        <div className='flex gap-1 flex-wrap'>
-          {colar?.tags.map((tag) => (
-            <Badge
-              variant={'outline'}
-              className='border-primary text-primary font-semibold'
-              key={tag}
-            >
-              {tag}
-            </Badge>
-          ))}
-        </div>
-        <P className='text-muted-foreground'>
-          {' '}
-          Por{' '}
-          {colar?.preco.toLocaleString('pt-br', {
-            style: 'currency',
-            currency: colar.moeda,
-          })}{' '}
-          {colar?.moeda}
-        </P>
+        <ViewTransition name={`tags-${colar.id}`}>
+          <div className='flex gap-1 flex-wrap'>
+            {colar?.tags.map((tag) => (
+              <Badge
+                variant={'outline'}
+                className='border-primary text-primary font-semibold'
+                key={tag}
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        </ViewTransition>
+        <ViewTransition name={`valor-${colar.id}`}>
+          <P className='text-muted-foreground'>
+            Por{' '}
+            {colar?.preco.toLocaleString('pt-br', {
+              style: 'currency',
+              currency: colar.moeda,
+            })}{' '}
+            {colar?.moeda}
+          </P>
+        </ViewTransition>
         <div className='flex gap-1'>
           <Rating defaultValue={Math.round(colar?.nota as number)} readOnly>
             {Array.from({ length: 5 }).map((_, index) => (
               <RatingButton key={index} />
             ))}
           </Rating>
-          <p>({colar?.avaliacoes} avaliacoes)</p>
+          <p>({colar?.avaliacoes} avaliações)</p>
         </div>
         <Button iconPlacement='right' icon={ShoppingCart} effect={'expandIcon'}>
           Adicionar ao carrinho
