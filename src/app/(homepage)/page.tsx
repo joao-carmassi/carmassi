@@ -1,12 +1,12 @@
 import ContainerBannerHome from '@/app/(homepage)/containerBannerHome';
 import ListaCards from '@/components/listaCards';
 import { Button } from '@/components/ui/button';
-import colaresData from '@/data/colares.json';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import ContainerInfoInfiniteSliderHome from './containerInfoInfiniteSliderHome';
 import ContainerInfoGridFotos from './containerInfoGridFotos';
 import { H2 } from '@/components/ui/h2';
+import { colaresData } from '../layout';
 
 const colares = colaresData.slice(0, 8);
 

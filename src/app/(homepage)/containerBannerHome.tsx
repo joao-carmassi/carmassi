@@ -1,4 +1,4 @@
-import CarroselHeroHome from '@/components/carroselHeroHome';
+import CarroselHeroHome from '@/app/(homepage)/carroselHeroHome';
 import { CarouselItem } from '@/components/ui/carousel';
 import { Image } from 'lucide-react';
 

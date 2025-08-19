@@ -5,47 +5,30 @@ import {
   CardDescription,
   CardHeader,
 } from '@/components/ui/card';
-import { IColaresData } from '@/types/iColaresData';
 import ModeloImage from './ui/modeloImage';
 import Link from 'next/link';
-import slugify from 'slugify';
 import { Badge } from './ui/badge';
+import { IColaresData } from '@/app/layout';
 
 type Props = {
-  colares: IColaresData;
+  colares: IColaresData[];
 };
 
 const ListaCards = ({ colares }: Props) => {
   return (
     <div className='grid w-full grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-12'>
       {colares.map((colar, index) => (
-        <Link
-          key={index}
-          href={`/produtos/${slugify(colar.nome, {
-            strict: true,
-            lower: true,
-          })}`}
-        >
+        <Link key={index} href={`/produtos/${colar.id}`}>
           <Card className='group cursor-pointer duration-300 hover:scale-105 h-fit'>
             <CardHeader>
               <CardDescription>
-                <ViewTransition
-                  name={`imagem-${slugify(colar.nome, {
-                    strict: true,
-                    lower: true,
-                  })}`}
-                >
+                <ViewTransition name={`imagem-${colar.id}`}>
                   <ModeloImage className='aspect-square' />
                 </ViewTransition>
               </CardDescription>
             </CardHeader>
             <CardContent className='flex flex-col gap-2'>
-              <ViewTransition
-                name={`tags-${slugify(colar.nome, {
-                  strict: true,
-                  lower: true,
-                })}`}
-              >
+              <ViewTransition name={`tags-${colar.id}`}>
                 <div className='flex gap-1 flex-wrap'>
                   {colar.tags.slice(0, 3).map((tag) => (
                     <Badge
@@ -58,12 +41,7 @@ const ListaCards = ({ colares }: Props) => {
                   ))}
                 </div>
               </ViewTransition>
-              <ViewTransition
-                name={`titulo-${slugify(colar.nome, {
-                  strict: true,
-                  lower: true,
-                })}`}
-              >
+              <ViewTransition name={`titulo-${colar.id}`}>
                 <p className='group-hover:underline text-sm md:text-base'>
                   {colar.nome}
                 </p>

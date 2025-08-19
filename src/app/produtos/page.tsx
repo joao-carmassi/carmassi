@@ -1,5 +1,5 @@
 import ListaCards from '@/components/listaCards';
-import colaresData from '@/data/colares.json';
+import { colaresData } from '../layout';
 
 const PageProdutos = () => {
   return (

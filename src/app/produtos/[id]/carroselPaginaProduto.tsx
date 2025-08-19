@@ -7,7 +7,7 @@ import {
   CarouselItem,
   type CarouselApi,
 } from '@/components/ui/carousel';
-import ModeloImage from './ui/modeloImage';
+import ModeloImage from '@/components/ui/modeloImage';
 
 const ITEMS = new Array(4).fill(null).map((_, index) => index + 1);
 

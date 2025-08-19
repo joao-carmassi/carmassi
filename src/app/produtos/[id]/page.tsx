@@ -1,14 +1,10 @@
-import { H1 } from '@/components/ui/h1';
-import ModeloImage from '@/components/ui/modeloImage';
-import { unstable_ViewTransition as ViewTransition } from 'react';
-import colaresData from '@/data/colares.json';
-import slugify from 'slugify';
-import { P } from '@/components/ui/p';
+import ContainerProduto from './containerProduto';
+import ListaCards from '@/components/listaCards';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Rating, RatingButton } from '@/components/ui/kibo-ui/rating';
-import { CarroselPaginaProduto } from '@/components/carroselPaginaProduto';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { colaresData } from '@/app/layout';
+import { notFound } from 'next/navigation';
 
 interface Props {
   params: Promise<{
@@ -18,9 +14,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   const { id } = await params;
-  const colar = colaresData.find(
-    (colar) => slugify(colar.nome, { strict: true, lower: true }) === id
-  );
+  const colar = colaresData.find((colar) => colar.id === id);
 
   return {
     title: `${colar?.nome} - Carmassi`,
@@ -30,77 +24,34 @@ export async function generateMetadata({ params }: Props) {
 
 const PaginaCompraProduto = async ({ params }: Props) => {
   const { id } = await params;
-  const colar = colaresData.find(
-    (colar) => slugify(colar.nome, { strict: true, lower: true }) === id
-  );
+  const colar = colaresData.find((colar) => colar.id === id);
+
+  if (!colar) {
+    return notFound();
+  }
 
   return (
     <main className='min-h-screen'>
-      <section className='mx-auto max-w-7xl p-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12'>
-        <div className='flex-1 hidden md:grid grid-cols-2 gap-3'>
-          <ViewTransition name={`imagem-${id}`}>
-            <ModeloImage className='aspect-[9/12] col-span-2' />
-          </ViewTransition>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <ModeloImage key={index} className='aspect-square' />
-          ))}
-        </div>
-        <div className='md:hidden w-full'>
-          <CarroselPaginaProduto />
-        </div>
-        <div className='flex-1 flex flex-col gap-2 sticky top-6 self-start'>
-          <ViewTransition name={`titulo-${id}`}>
-            <H1>
-              {colar?.nome} - {colar?.categoria}
-            </H1>
-          </ViewTransition>
-          <div className='flex gap-1 flex-wrap'>
-            {colar?.tags.map((tag) => (
-              <Badge
-                variant={'outline'}
-                className='border-primary text-primary font-semibold'
-                key={tag}
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div>
-          <P className='text-muted-foreground'>
-            {' '}
-            Por{' '}
-            {colar?.preco.toLocaleString('pt-br', {
-              style: 'currency',
-              currency: colar.moeda,
-            })}{' '}
-            {colar?.moeda}
-          </P>
-          <div className='flex gap-1'>
-            <Rating defaultValue={Math.round(colar?.nota as number)} readOnly>
-              {Array.from({ length: 5 }).map((_, index) => (
-                <RatingButton key={index} />
-              ))}
-            </Rating>
-            <p>({colar?.avaliacoes} avaliacoes)</p>
-          </div>
-          <Button
-            iconPlacement='right'
-            icon={ShoppingCart}
-            effect={'expandIcon'}
-          >
-            Adicionar ao carrinho
-          </Button>
-          <p className='text-lg'>{colar?.descricao}</p>
-          <div>
-            <h2 className='text-lg'>Características:</h2>
-            <ul className='list-disc list-inside text-lg'>
-              <li>Material: {colar?.caracteristicas.material}</li>
-              <li>Peso: {colar?.caracteristicas.peso}</li>
-              <li>Comprimento: {colar?.caracteristicas.comprimento}</li>
-              <li>Espessura: {colar?.caracteristicas.espessura}</li>
-              <li>Fecho: {colar?.caracteristicas.fecho}</li>
-            </ul>
-          </div>
-        </div>
+      <ContainerProduto colar={colar} id={id} />
+      <section className='max-w-7xl mx-auto p-6 md:p-12 flex flex-col gap-6'>
+        <ListaCards
+          colares={colaresData
+            .filter(
+              (xColar) =>
+                xColar.categoria === colar.categoria &&
+                xColar.nome !== colar.nome
+            )
+            .splice(0, 4)}
+        />
+        <Button
+          asChild
+          effect={'expandIcon'}
+          iconPlacement='right'
+          icon={ArrowRight}
+          className='w-fit'
+        >
+          <Link href={'/produtos'}>Ver mais</Link>
+        </Button>
       </section>
     </main>
   );
@@ -108,7 +59,7 @@ const PaginaCompraProduto = async ({ params }: Props) => {
 
 export async function generateStaticParams() {
   return colaresData.map((colar) => ({
-    id: slugify(colar.nome, { strict: true, lower: true }),
+    id: colar.id,
   }));
 }
 
