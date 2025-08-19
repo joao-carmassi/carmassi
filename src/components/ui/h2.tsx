@@ -9,7 +9,7 @@ export function H2({
 }) {
   return (
     <h2
-      className={`scroll-m-20 text-3xl md:text-4xl font-semibold tracking-tight first:mt-0 ${className}`}
+      className={`scroll-m-20 text-primary text-3xl md:text-4xl font-semibold tracking-tight first:mt-0 ${className}`}
     >
       {children}
     </h2>

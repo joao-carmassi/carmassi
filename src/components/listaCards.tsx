@@ -48,7 +48,13 @@ const ListaCards = ({ colares }: Props) => {
               >
                 <div className='flex gap-1 flex-wrap'>
                   {colar.tags.slice(0, 3).map((tag) => (
-                    <Badge key={tag}>{tag}</Badge>
+                    <Badge
+                      variant={'outline'}
+                      className='border-primary text-primary font-semibold'
+                      key={tag}
+                    >
+                      {tag}
+                    </Badge>
                   ))}
                 </div>
               </ViewTransition>

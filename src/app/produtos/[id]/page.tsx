@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-const Teste = async ({ params }: Props) => {
+const PaginaCompraProduto = async ({ params }: Props) => {
   const { id } = await params;
   const colar = colaresData.find(
     (colar) => slugify(colar.nome, { strict: true, lower: true }) === id
@@ -108,4 +108,4 @@ export async function generateStaticParams() {
   }));
 }
 
-export default Teste;
+export default PaginaCompraProduto;
