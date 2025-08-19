@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { H2 } from '@/components/ui/h2';
 import { P } from '@/components/ui/p';
-import InfiniteSliderScreenVerifier from './infiniteSliderScreenVerifier';
+import { InfiniteSlider } from '@/components/ui/infinite-slider';
+import Image from 'next/image';
 
 const ContainerInfoInfiniteSliderHome = () => {
   return (
@@ -15,7 +16,76 @@ const ContainerInfoInfiniteSliderHome = () => {
         <Button effect={'ringHover'}>Lorem</Button>
       </div>
       <div className='flex-1 flex flex-col md:flex-row gap-3 overflow-hidden max-h-[37.5rem]'>
-        <InfiniteSliderScreenVerifier />
+        <InfiniteSlider
+          speedOnHover={15}
+          speed={50}
+          className='w-full h-full hidden md:block'
+          direction='vertical'
+        >
+          {Array.from({ length: 10 }).map((_, index) => (
+            <Image
+              key={index}
+              width={278}
+              height={278}
+              src={`https://aleatori.cat/random`}
+              alt=''
+              className='object-cover object-center aspect-square h-36 md:h-fit md:w-full'
+            />
+          ))}
+        </InfiniteSlider>
+        <InfiniteSlider
+          speedOnHover={15}
+          speed={50}
+          className='w-full h-full hidden md:block'
+          direction='vertical'
+          reverse
+        >
+          {Array.from({ length: 10 }).map((_, index) => (
+            <Image
+              key={index}
+              width={278}
+              height={278}
+              src={`https://aleatori.cat/random`}
+              alt=''
+              className='object-cover object-center aspect-square h-36 md:h-fit md:w-full'
+            />
+          ))}
+        </InfiniteSlider>
+        <InfiniteSlider
+          speedOnHover={15}
+          speed={50}
+          className='w-full h-full md:hidden'
+          direction='horizontal'
+        >
+          {Array.from({ length: 10 }).map((_, index) => (
+            <Image
+              key={index}
+              width={120}
+              height={120}
+              src={`https://aleatori.cat/random`}
+              alt=''
+              className='object-cover object-center aspect-square h-36 md:h-fit md:w-full'
+            />
+          ))}
+        </InfiniteSlider>
+        <InfiniteSlider
+          speedOnHover={15}
+          speed={50}
+          className='w-full h-full md:hidden'
+          direction='horizontal'
+          reverse
+        >
+          {Array.from({ length: 10 }).map((_, index) => (
+            <Image
+              key={index}
+              width={120}
+              height={120}
+              src={`https://aleatori.cat/random`}
+              alt=''
+              className='object-cover object-center aspect-square h-36 md:h-fit md:w-full'
+            />
+          ))}
+        </InfiniteSlider>
       </div>
     </section>
   );

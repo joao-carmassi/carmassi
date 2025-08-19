@@ -6,7 +6,8 @@ import { ShoppingCart } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Rating, RatingButton } from '@/components/ui/kibo-ui/rating';
 import { IColaresData } from '@/app/layout';
-import ColagemImagensProdutos from './colagemImagensProdutos';
+import Image from 'next/image';
+import { CarroselPaginaProduto } from './carroselPaginaProduto';
 
 interface Props {
   colar: IColaresData;
@@ -15,7 +16,30 @@ interface Props {
 const ContainerProduto = ({ colar }: Props) => {
   return (
     <section className='mx-auto max-w-7xl p-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12'>
-      <ColagemImagensProdutos colar={colar} />
+      <div className='flex-1 hidden md:grid grid-cols-2 gap-3'>
+        <ViewTransition name={`imagem-${colar.id}`}>
+          <Image
+            height={750}
+            width={550}
+            src={`https://aleatori.cat/random`}
+            alt=''
+            className='w-full object-cover object-center aspect-[9/12] col-span-2'
+          />
+        </ViewTransition>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <Image
+            key={index}
+            width={278}
+            height={278}
+            src={`https://aleatori.cat/random`}
+            alt=''
+            className='w-full object-cover object-center aspect-square'
+          />
+        ))}
+      </div>
+      <div className='w-full md:hidden'>
+        <CarroselPaginaProduto />
+      </div>
 
       <div className='flex-1 flex flex-col gap-2 sticky top-6 self-start'>
         <ViewTransition name={`titulo-${colar.id}`}>

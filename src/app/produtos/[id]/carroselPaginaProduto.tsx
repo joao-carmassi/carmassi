@@ -7,7 +7,7 @@ import {
   CarouselItem,
   type CarouselApi,
 } from '@/components/ui/carousel';
-import ModeloImage from '@/components/ui/modeloImage';
+import Image from 'next/image';
 
 const ITEMS = new Array(4).fill(null).map((_, index) => index + 1);
 
@@ -31,7 +31,13 @@ export function CarroselPaginaProduto() {
         <CarouselContent>
           {ITEMS.map((item) => (
             <CarouselItem key={item} className='pb-4'>
-              <ModeloImage className='aspect-square' />
+              <Image
+                width={340}
+                height={340}
+                src={`https://aleatori.cat/random`}
+                alt=''
+                className='w-full object-cover object-center aspect-square'
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -48,7 +54,13 @@ export function CarroselPaginaProduto() {
               index === i ? 'bg-zinc-200 dark:bg-zinc-800' : ''
             }`}
           >
-            <ModeloImage className='aspect-square' />
+            <Image
+              width={76}
+              height={76}
+              src={`https://aleatori.cat/random`}
+              alt=''
+              className='w-full object-cover object-center aspect-square'
+            />
           </button>
         ))}
       </div>

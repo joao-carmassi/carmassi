@@ -5,10 +5,10 @@ import {
   CardDescription,
   CardHeader,
 } from '@/components/ui/card';
-import ModeloImage from './ui/modeloImage';
 import Link from 'next/link';
 import { Badge } from './ui/badge';
 import { IColaresData } from '@/app/layout';
+import Image from 'next/image';
 
 type Props = {
   colares: IColaresData[];
@@ -23,7 +23,13 @@ const ListaCards = ({ colares }: Props) => {
             <CardHeader>
               <CardDescription>
                 <ViewTransition name={`imagem-${colar.id}`}>
-                  <ModeloImage className='aspect-square' />
+                  <Image
+                    width={260}
+                    height={260}
+                    src={`https://aleatori.cat/random`}
+                    alt=''
+                    className='w-full object-cover object-center aspect-square'
+                  />
                 </ViewTransition>
               </CardDescription>
             </CardHeader>

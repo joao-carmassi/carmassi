@@ -1,17 +1,23 @@
 import CarroselHeroHome from '@/app/(homepage)/carroselHeroHome';
 import { CarouselItem } from '@/components/ui/carousel';
-import { Image } from 'lucide-react';
+import Image from 'next/image';
 
 const ContainerBannerHome = () => {
   return (
     <section className=''>
       <CarroselHeroHome className='pb-4'>
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem className='md:pl-8 md:basis-[80%]' key={index}>
-            <div className='bg-muted w-full h-72 md:h-[30rem] grid place-items-center text-5xl font-bold'>
-              {/* eslint-disable-next-line jsx-a11y/alt-text */}
-              <Image />
-            </div>
+          <CarouselItem
+            className='md:pl-8 md:basis-[80%] h-72 md:h-[30rem]'
+            key={index}
+          >
+            <Image
+              width={1920}
+              height={1200}
+              src={`https://aleatori.cat/random`}
+              alt=''
+              className='w-full object-cover object-center'
+            />
           </CarouselItem>
         ))}
       </CarroselHeroHome>

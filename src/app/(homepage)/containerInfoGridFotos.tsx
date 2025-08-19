@@ -1,7 +1,7 @@
-import ModeloImage from '@/components/ui/modeloImage';
 import { H2 } from '@/components/ui/h2';
 import { Button } from '@/components/ui/button';
 import { P } from '@/components/ui/p';
+import Image from 'next/image';
 
 const ContainerInfoGridFotos = () => {
   return (
@@ -16,10 +16,38 @@ const ContainerInfoGridFotos = () => {
         <Button effect={'ringHover'}>lorem</Button>
       </div>
       <div className='flex-1 grid grid-cols-4 grid-rows-10 gap-4 h-full w-full'>
-        <ModeloImage className='row-span-3 col-start-2' />
-        <ModeloImage className='col-span-2 row-span-6 col-start-1 row-start-4' />
-        <ModeloImage className='col-span-2 row-span-6 col-start-3 row-start-2' />
-        <ModeloImage className='row-span-3 col-start-3 row-start-8' />
+        <div className='relative row-span-3 col-start-2'>
+          <Image
+            src={`https://aleatori.cat/random`}
+            alt=''
+            fill
+            className='object-cover object-center'
+          />
+        </div>
+        <div className='relative col-span-2 row-span-6 col-start-1 row-start-4'>
+          <Image
+            src={`https://aleatori.cat/random`}
+            alt=''
+            fill
+            className='object-cover object-center'
+          />
+        </div>
+        <div className='relative col-span-2 row-span-6 col-start-3 row-start-2'>
+          <Image
+            src={`https://aleatori.cat/random`}
+            alt=''
+            fill
+            className='object-cover object-center'
+          />
+        </div>
+        <div className='relative row-span-3 col-start-3 row-start-8'>
+          <Image
+            src={`https://aleatori.cat/random`}
+            alt=''
+            fill
+            className='object-cover object-center'
+          />
+        </div>
       </div>
     </section>
   );
