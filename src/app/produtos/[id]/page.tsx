@@ -7,6 +7,7 @@ import { P } from '@/components/ui/p';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Rating, RatingButton } from '@/components/ui/kibo-ui/rating';
 
 interface Props {
   params: Promise<{
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: Props) {
 
   return {
     title: `${colar?.nome} - Carmassi`,
-    description: `Conheça o ${colar?.nome}.`,
+    description: `Conheça o ${colar?.descricao}.`,
   };
 }
 
@@ -53,14 +54,13 @@ const Teste = async ({ params }: Props) => {
             {colar?.tags.map((tag) => (
               <Badge
                 variant={'outline'}
-                className='border-primary text-primary'
+                className='border-primary text-primary font-semibold'
                 key={tag}
               >
                 {tag}
               </Badge>
             ))}
           </div>
-
           <P className='text-muted-foreground'>
             {' '}
             Por{' '}
@@ -70,6 +70,14 @@ const Teste = async ({ params }: Props) => {
             })}{' '}
             {colar?.moeda}
           </P>
+          <div className='flex gap-1'>
+            <Rating defaultValue={Math.round(colar?.nota as number)} readOnly>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <RatingButton key={index} />
+              ))}
+            </Rating>
+            <p>({colar?.avaliacoes} avaliacoes)</p>
+          </div>
           <Button
             iconPlacement='right'
             icon={ShoppingCart}
@@ -77,10 +85,10 @@ const Teste = async ({ params }: Props) => {
           >
             Adicionar ao carrinho
           </Button>
-          <p>{colar?.descricao}</p>
+          <p className='text-lg'>{colar?.descricao}</p>
           <div>
-            <h2>Características:</h2>
-            <ul className='list-disc list-inside'>
+            <h2 className='text-lg'>Características:</h2>
+            <ul className='list-disc list-inside text-lg'>
               <li>Material: {colar?.caracteristicas.material}</li>
               <li>Peso: {colar?.caracteristicas.peso}</li>
               <li>Comprimento: {colar?.caracteristicas.comprimento}</li>

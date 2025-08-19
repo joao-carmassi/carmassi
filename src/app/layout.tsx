@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR'>
-      <body className={`${raleway.variable} font-raleway tracking-widest`}>
+      <body className={`dark ${raleway.variable} font-raleway tracking-widest`}>
         <Navbar />
         {children}
         <Footer />
