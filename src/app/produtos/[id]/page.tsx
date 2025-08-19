@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { ShoppingCart } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Rating, RatingButton } from '@/components/ui/kibo-ui/rating';
+import { CarroselPaginaProduto } from '@/components/carroselPaginaProduto';
 
 interface Props {
   params: Promise<{
@@ -35,14 +36,17 @@ const PaginaCompraProduto = async ({ params }: Props) => {
 
   return (
     <main className='min-h-screen'>
-      <section className='mx-auto max-w-7xl p-6 md:p-12 flex gap-6 md:gap-12'>
-        <div className='flex-1 grid grid-cols-2 gap-3'>
+      <section className='mx-auto max-w-7xl p-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12'>
+        <div className='flex-1 hidden md:grid grid-cols-2 gap-3'>
           <ViewTransition name={`imagem-${id}`}>
             <ModeloImage className='aspect-[9/12] col-span-2' />
           </ViewTransition>
           {Array.from({ length: 5 }).map((_, index) => (
             <ModeloImage key={index} className='aspect-square' />
           ))}
+        </div>
+        <div className='md:hidden w-full'>
+          <CarroselPaginaProduto />
         </div>
         <div className='flex-1 flex flex-col gap-2 sticky top-6 self-start'>
           <ViewTransition name={`titulo-${id}`}>
