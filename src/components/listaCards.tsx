@@ -1,4 +1,3 @@
-import { unstable_ViewTransition as ViewTransition } from 'react';
 import {
   Card,
   CardContent,
@@ -22,46 +21,38 @@ const ListaCards = ({ colares }: Props) => {
           <Card className='group cursor-pointer duration-300 hover:scale-105 h-fit'>
             <CardHeader>
               <CardDescription>
-                <ViewTransition name={`imagem-${colar.id}`}>
-                  <Image
-                    width={260}
-                    height={260}
-                    src={`/placeholder.avif`}
-                    alt=''
-                    className='w-full object-cover object-center aspect-square'
-                  />
-                </ViewTransition>
+                <Image
+                  width={260}
+                  height={260}
+                  src={`/placeholder.avif`}
+                  alt=''
+                  className='w-full object-cover object-center aspect-square'
+                />
               </CardDescription>
             </CardHeader>
             <CardContent className='flex flex-col gap-2'>
-              <ViewTransition name={`tags-${colar.id}`}>
-                <div className='flex gap-1 flex-wrap'>
-                  {colar.tags.slice(0, 3).map((tag) => (
-                    <Badge
-                      variant={'outline'}
-                      className='border-primary text-primary font-semibold'
-                      key={tag}
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </ViewTransition>
-              <ViewTransition name={`titulo-${colar.id}`}>
-                <p className='group-hover:underline text-sm md:text-base'>
-                  {colar.nome}
-                </p>
-              </ViewTransition>
-              <ViewTransition name={`valor-${colar.id}`}>
-                <p className='text-xs'>
-                  Por{' '}
-                  {colar.preco.toLocaleString('pt-br', {
-                    style: 'currency',
-                    currency: colar.moeda,
-                  })}{' '}
-                  {colar.moeda}
-                </p>
-              </ViewTransition>
+              <div className='flex gap-1 flex-wrap'>
+                {colar.tags.slice(0, 3).map((tag) => (
+                  <Badge
+                    variant={'outline'}
+                    className='border-primary text-primary font-semibold'
+                    key={tag}
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+              <p className='group-hover:underline text-sm md:text-base'>
+                {colar.nome}
+              </p>
+              <p className='text-xs'>
+                Por{' '}
+                {colar.preco.toLocaleString('pt-br', {
+                  style: 'currency',
+                  currency: colar.moeda,
+                })}{' '}
+                {colar.moeda}
+              </p>
             </CardContent>
           </Card>
         </Link>

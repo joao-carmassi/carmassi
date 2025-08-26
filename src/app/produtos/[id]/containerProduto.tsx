@@ -1,5 +1,4 @@
 import { H1 } from '@/components/ui/h1';
-import { unstable_ViewTransition as ViewTransition } from 'react';
 import { P } from '@/components/ui/p';
 import { Button } from '@/components/ui/button';
 import { ShoppingCart } from 'lucide-react';
@@ -17,15 +16,13 @@ const ContainerProduto = ({ colar }: Props) => {
   return (
     <section className='mx-auto max-w-7xl p-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12'>
       <div className='flex-1 hidden md:grid grid-cols-2 gap-3'>
-        <ViewTransition name={`imagem-${colar.id}`}>
-          <Image
-            height={750}
-            width={550}
-            src={`/placeholder.avif`}
-            alt=''
-            className='w-full object-cover object-center aspect-[9/12] col-span-2'
-          />
-        </ViewTransition>
+        <Image
+          height={750}
+          width={550}
+          src={`/placeholder.avif`}
+          alt=''
+          className='w-full object-cover object-center aspect-[9/12] col-span-2'
+        />
         {Array.from({ length: 5 }).map((_, index) => (
           <Image
             key={index}
@@ -40,36 +37,29 @@ const ContainerProduto = ({ colar }: Props) => {
       <div className='w-full md:hidden'>
         <CarroselPaginaProduto />
       </div>
-
       <div className='flex-1 flex flex-col gap-2 sticky top-6 self-start'>
-        <ViewTransition name={`titulo-${colar.id}`}>
-          <H1>
-            {colar?.nome} - {colar?.categoria}
-          </H1>
-        </ViewTransition>
-        <ViewTransition name={`tags-${colar.id}`}>
-          <div className='flex gap-1 flex-wrap'>
-            {colar?.tags.map((tag) => (
-              <Badge
-                variant={'outline'}
-                className='border-primary text-primary font-semibold'
-                key={tag}
-              >
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        </ViewTransition>
-        <ViewTransition name={`valor-${colar.id}`}>
-          <P className='text-muted-foreground'>
-            Por{' '}
-            {colar?.preco.toLocaleString('pt-br', {
-              style: 'currency',
-              currency: colar.moeda,
-            })}{' '}
-            {colar?.moeda}
-          </P>
-        </ViewTransition>
+        <H1>
+          {colar?.nome} - {colar?.categoria}
+        </H1>
+        <div className='flex gap-1 flex-wrap'>
+          {colar?.tags.map((tag) => (
+            <Badge
+              variant={'outline'}
+              className='border-primary text-primary font-semibold'
+              key={tag}
+            >
+              {tag}
+            </Badge>
+          ))}
+        </div>
+        <P className='text-muted-foreground'>
+          Por{' '}
+          {colar?.preco.toLocaleString('pt-br', {
+            style: 'currency',
+            currency: colar.moeda,
+          })}{' '}
+          {colar?.moeda}
+        </P>
         <div className='flex gap-1'>
           <Rating defaultValue={Math.round(colar?.nota as number)} readOnly>
             {Array.from({ length: 5 }).map((_, index) => (

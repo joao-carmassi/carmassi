@@ -6,6 +6,25 @@ import Footer from '@/components/footer';
 import jsonColares from '@/data/colares.json';
 import slugify from 'slugify';
 
+// const container: Variants = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.075,
+//       delayChildren: 0.15,
+//     },
+//   },
+// };
+
+// const fadeUp: Variants = {
+//   hidden: { opacity: 0, y: 40 },
+//   show: {
+//     opacity: 1,
+//     y: 0,
+//     transition: { type: 'spring', stiffness: 120, damping: 20 },
+//   },
+// };
+
 const raleway = Raleway({
   variable: '--font-raleway',
   subsets: ['latin'],
