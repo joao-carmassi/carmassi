@@ -1,10 +1,26 @@
 import CarroselHeroHome from '@/app/(homepage)/carroselHeroHome';
 import { CarouselItem } from '@/components/ui/carousel';
+import DivAnimation from '@/components/ui/divAnimation';
+import { Variants } from 'motion/react';
 import Image from 'next/image';
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', stiffness: 120, damping: 20 },
+  },
+};
 
 const ContainerBannerHome = () => {
   return (
-    <section className=''>
+    <DivAnimation
+      viewport={{ once: true }}
+      variants={fadeUp}
+      initial='hidden'
+      whileInView='show'
+    >
       <CarroselHeroHome className='pb-4'>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem
@@ -21,7 +37,7 @@ const ContainerBannerHome = () => {
           </CarouselItem>
         ))}
       </CarroselHeroHome>
-    </section>
+    </DivAnimation>
   );
 };
 

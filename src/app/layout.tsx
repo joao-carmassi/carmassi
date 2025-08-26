@@ -5,25 +5,7 @@ import Navbar from '@/components/nav';
 import Footer from '@/components/footer';
 import jsonColares from '@/data/colares.json';
 import slugify from 'slugify';
-
-// const container: Variants = {
-//   hidden: {},
-//   show: {
-//     transition: {
-//       staggerChildren: 0.075,
-//       delayChildren: 0.15,
-//     },
-//   },
-// };
-
-// const fadeUp: Variants = {
-//   hidden: { opacity: 0, y: 40 },
-//   show: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { type: 'spring', stiffness: 120, damping: 20 },
-//   },
-// };
+import CartProvider from '@/context/carrinho';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -49,9 +31,12 @@ export default function RootLayout({
   return (
     <html lang='pt-BR'>
       <body className={`${raleway.variable} font-raleway tracking-widest`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <CartProvider>
+          <Navbar />
+          <div className='h-16' />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

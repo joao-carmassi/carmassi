@@ -1,21 +1,36 @@
 import { H1 } from '@/components/ui/h1';
 import { P } from '@/components/ui/p';
-import { Button } from '@/components/ui/button';
-import { ShoppingCart } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Rating, RatingButton } from '@/components/ui/kibo-ui/rating';
 import { IColaresData } from '@/app/layout';
 import Image from 'next/image';
 import { CarroselPaginaProduto } from './carroselPaginaProduto';
 import InputFrete from './inputFrete';
+import SectionAnimation from '@/components/ui/sectionAnimation';
+import { Variants } from 'motion/react';
+import BotaoAdicioarCarrinho from '@/components/ui/BotaoAdicionarCarrinho';
 
 interface Props {
   colar: IColaresData;
 }
 
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', stiffness: 120, damping: 20 },
+  },
+};
+
 const ContainerProduto = ({ colar }: Props) => {
   return (
-    <section className='mx-auto max-w-7xl p-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12'>
+    <SectionAnimation
+      variants={fadeUp}
+      initial='hidden'
+      whileInView='show'
+      className='mx-auto max-w-7xl p-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12'
+    >
       <div className='flex-1 hidden md:grid grid-cols-2 gap-3'>
         <Image
           height={750}
@@ -38,7 +53,7 @@ const ContainerProduto = ({ colar }: Props) => {
       <div className='w-full md:hidden'>
         <CarroselPaginaProduto />
       </div>
-      <div className='flex-1 flex flex-col gap-2 sticky top-6 self-start text-lg'>
+      <div className='flex-1 flex flex-col gap-2 sticky top-[5.5rem] self-start text-lg'>
         <H1>
           {colar?.nome} - {colar?.categoria}
         </H1>
@@ -69,9 +84,7 @@ const ContainerProduto = ({ colar }: Props) => {
           </Rating>
           <p>({colar?.avaliacoes} avaliações)</p>
         </div>
-        <Button iconPlacement='right' icon={ShoppingCart} effect={'expandIcon'}>
-          Adicionar ao carrinho
-        </Button>
+        <BotaoAdicioarCarrinho produto={colar} />
         <InputFrete />
         <p>{colar?.descricao}</p>
         <div>
@@ -85,7 +98,7 @@ const ContainerProduto = ({ colar }: Props) => {
           </ul>
         </div>
       </div>
-    </section>
+    </SectionAnimation>
   );
 };
 

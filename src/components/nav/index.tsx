@@ -2,10 +2,11 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { P } from '../ui/p';
 import BotaoCarrinho from '../ui/botaoCarrinho';
+import { Search, User } from 'lucide-react';
 
 const Navbar = () => {
   return (
-    <div className='bg-card'>
+    <header className='bg-card w-full fixed top-0 z-40'>
       <nav className='h-16 bg-card border-b'>
         <div className='h-full flex items-center justify-between max-w-7xl mx-auto px-6 md:px-12'>
           <div className='flex items-center gap-8'>
@@ -13,18 +14,23 @@ const Navbar = () => {
               <P>Carmassi</P>
             </Link>
 
-            {/* Desktop Menu */}
-            <Button variant={'outline'} className='asChild'>
+            <Button variant={'link'} className='asChild'>
               <Link href={'/produtos'}>Produtos</Link>
             </Button>
           </div>
 
           <div className='flex items-center gap-3'>
+            <Button variant='outline' size='icon' className='rounded-full'>
+              <Search />
+            </Button>
             <BotaoCarrinho />
+            <Button variant='outline' size='icon' className='rounded-full'>
+              <User />
+            </Button>
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 
