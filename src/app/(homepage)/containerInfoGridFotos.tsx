@@ -18,7 +18,7 @@ const ContainerInfoGridFotos = () => {
       <div className='flex-1 grid grid-cols-4 grid-rows-10 gap-4 h-full w-full'>
         <div className='relative row-span-3 col-start-2'>
           <Image
-            src={`https://aleatori.cat/random`}
+            src={`/placeholder.avif`}
             alt=''
             fill
             className='object-cover object-center'
@@ -26,7 +26,7 @@ const ContainerInfoGridFotos = () => {
         </div>
         <div className='relative col-span-2 row-span-6 col-start-1 row-start-4'>
           <Image
-            src={`https://aleatori.cat/random`}
+            src={`/placeholder.avif`}
             alt=''
             fill
             className='object-cover object-center'
@@ -34,7 +34,7 @@ const ContainerInfoGridFotos = () => {
         </div>
         <div className='relative col-span-2 row-span-6 col-start-3 row-start-2'>
           <Image
-            src={`https://aleatori.cat/random`}
+            src={`/placeholder.avif`}
             alt=''
             fill
             className='object-cover object-center'
@@ -42,7 +42,7 @@ const ContainerInfoGridFotos = () => {
         </div>
         <div className='relative row-span-3 col-start-3 row-start-8'>
           <Image
-            src={`https://aleatori.cat/random`}
+            src={`/placeholder.avif`}
             alt=''
             fill
             className='object-cover object-center'

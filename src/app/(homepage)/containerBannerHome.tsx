@@ -14,7 +14,7 @@ const ContainerBannerHome = () => {
             <Image
               width={1920}
               height={1200}
-              src={`https://aleatori.cat/random`}
+              src={`/placeholder.avif`}
               alt=''
               className='w-full object-cover object-center'
             />

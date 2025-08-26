@@ -27,7 +27,7 @@ const ContainerInfoInfiniteSliderHome = () => {
               key={index}
               width={278}
               height={278}
-              src={`https://aleatori.cat/random`}
+              src={`/placeholder.avif`}
               alt=''
               className='object-cover object-center aspect-square h-36 md:h-fit md:w-full'
             />
@@ -45,7 +45,7 @@ const ContainerInfoInfiniteSliderHome = () => {
               key={index}
               width={278}
               height={278}
-              src={`https://aleatori.cat/random`}
+              src={`/placeholder.avif`}
               alt=''
               className='object-cover object-center aspect-square h-36 md:h-fit md:w-full'
             />
@@ -62,7 +62,7 @@ const ContainerInfoInfiniteSliderHome = () => {
               key={index}
               width={120}
               height={120}
-              src={`https://aleatori.cat/random`}
+              src={`/placeholder.avif`}
               alt=''
               className='object-cover object-center aspect-square h-36 md:h-fit md:w-full'
             />
@@ -80,7 +80,7 @@ const ContainerInfoInfiniteSliderHome = () => {
               key={index}
               width={120}
               height={120}
-              src={`https://aleatori.cat/random`}
+              src={`/placeholder.avif`}
               alt=''
               className='object-cover object-center aspect-square h-36 md:h-fit md:w-full'
             />

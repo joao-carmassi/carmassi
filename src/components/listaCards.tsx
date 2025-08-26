@@ -26,7 +26,7 @@ const ListaCards = ({ colares }: Props) => {
                   <Image
                     width={260}
                     height={260}
-                    src={`https://aleatori.cat/random`}
+                    src={`/placeholder.avif`}
                     alt=''
                     className='w-full object-cover object-center aspect-square'
                   />

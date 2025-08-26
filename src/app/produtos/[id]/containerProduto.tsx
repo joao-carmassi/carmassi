@@ -21,7 +21,7 @@ const ContainerProduto = ({ colar }: Props) => {
           <Image
             height={750}
             width={550}
-            src={`https://aleatori.cat/random`}
+            src={`/placeholder.avif`}
             alt=''
             className='w-full object-cover object-center aspect-[9/12] col-span-2'
           />
@@ -31,7 +31,7 @@ const ContainerProduto = ({ colar }: Props) => {
             key={index}
             width={278}
             height={278}
-            src={`https://aleatori.cat/random`}
+            src={`/placeholder.avif`}
             alt=''
             className='w-full object-cover object-center aspect-square'
           />

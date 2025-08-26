@@ -34,7 +34,7 @@ export function CarroselPaginaProduto() {
               <Image
                 width={340}
                 height={340}
-                src={`https://aleatori.cat/random`}
+                src={`/placeholder.avif`}
                 alt=''
                 className='w-full object-cover object-center aspect-square'
               />
@@ -57,7 +57,7 @@ export function CarroselPaginaProduto() {
             <Image
               width={76}
               height={76}
-              src={`https://aleatori.cat/random`}
+              src={`/placeholder.avif`}
               alt=''
               className='w-full object-cover object-center aspect-square'
             />
