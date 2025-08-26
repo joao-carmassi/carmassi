@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { Logo } from './logo';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
+import { P } from '../ui/p';
 
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className='h-full flex items-center justify-between max-w-7xl mx-auto px-6 md:px-12'>
           <div className='flex items-center gap-8'>
             <Link href={'/'}>
-              <Logo />
+              <P>Carmassi</P>
             </Link>
 
             {/* Desktop Menu */}

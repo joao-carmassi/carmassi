@@ -71,7 +71,8 @@ body::-webkit-scrollbar-thumb {
   --sidebar-accent-foreground: oklch(0.1504 0.0308 85.7275);
   --sidebar-border: oklch(0.851 0.0194 279.4801);
   --sidebar-ring: oklch(0.5495 0.2495 299.9967);
-  --radius: 0.5rem;
+  /* --radius: 0.5rem; */
+  --radius: 0rem;
   --shadow-2xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.05);
   --shadow-sm: 0px 4px 8px -1px hsl(0 0% 0% / 0.1),
@@ -122,7 +123,8 @@ body::-webkit-scrollbar-thumb {
   --sidebar-accent-foreground: oklch(0.1504 0.0308 85.7275);
   --sidebar-border: oklch(0.3005 0.0488 279.7834);
   --sidebar-ring: oklch(0.6407 0.235 302.4746);
-  --radius: 0.375rem;
+  /* --radius: 0.375rem; */
+  --radius: 0rem;
   --shadow-2xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0px 4px 8px -1px hsl(0 0% 0% / 0.05);
   --shadow-sm: 0px 4px 8px -1px hsl(0 0% 0% / 0.1),
@@ -177,6 +179,7 @@ body::-webkit-scrollbar-thumb {
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-tags: calc(0.5rem - 2px);
 
   --shadow-2xs: var(--shadow-2xs);
   --shadow-xs: var(--shadow-xs);

@@ -7,6 +7,7 @@ import { Rating, RatingButton } from '@/components/ui/kibo-ui/rating';
 import { IColaresData } from '@/app/layout';
 import Image from 'next/image';
 import { CarroselPaginaProduto } from './carroselPaginaProduto';
+import InputFrete from './inputFrete';
 
 interface Props {
   colar: IColaresData;
@@ -37,7 +38,7 @@ const ContainerProduto = ({ colar }: Props) => {
       <div className='w-full md:hidden'>
         <CarroselPaginaProduto />
       </div>
-      <div className='flex-1 flex flex-col gap-2 sticky top-6 self-start'>
+      <div className='flex-1 flex flex-col gap-2 sticky top-6 self-start text-lg'>
         <H1>
           {colar?.nome} - {colar?.categoria}
         </H1>
@@ -71,10 +72,11 @@ const ContainerProduto = ({ colar }: Props) => {
         <Button iconPlacement='right' icon={ShoppingCart} effect={'expandIcon'}>
           Adicionar ao carrinho
         </Button>
-        <p className='text-lg'>{colar?.descricao}</p>
+        <InputFrete />
+        <p>{colar?.descricao}</p>
         <div>
-          <h2 className='text-lg'>Características:</h2>
-          <ul className='list-disc list-inside text-lg'>
+          <h2>Características:</h2>
+          <ul className='list-disc list-inside '>
             <li>Material: {colar?.caracteristicas.material}</li>
             <li>Peso: {colar?.caracteristicas.peso}</li>
             <li>Comprimento: {colar?.caracteristicas.comprimento}</li>
