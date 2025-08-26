@@ -16,7 +16,7 @@ const ContainerBannerHome = () => {
               height={1200}
               src={`/placeholder.avif`}
               alt=''
-              className='w-full object-cover object-center'
+              className='w-full h-full object-cover object-center'
             />
           </CarouselItem>
         ))}

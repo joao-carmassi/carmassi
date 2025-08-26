@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { P } from '../ui/p';
+import BotaoCarrinho from '../ui/botaoCarrinho';
 
 const Navbar = () => {
   return (
@@ -20,9 +20,7 @@ const Navbar = () => {
           </div>
 
           <div className='flex items-center gap-3'>
-            <Button>
-              Get Started <ArrowUpRight />
-            </Button>
+            <BotaoCarrinho />
           </div>
         </div>
       </nav>
