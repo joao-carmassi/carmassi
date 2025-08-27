@@ -2,7 +2,7 @@
 
 import ListaCards from '@/components/listaCards';
 import { IProdutosData } from '../app/layout';
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
 import FiltroProdutos from './filtroProdutos';
 
 type Props = {
@@ -16,29 +16,28 @@ const ContainerFiltraProdutos = ({ produtos, tipos, q }: Props) => {
   const [tipo, setTipo] = useState<string>(q || '');
   const [ordem, setOrdem] = useState<string>('');
 
-  useEffect(() => {
-    if (tipo === 'todos') {
-      setFiltrados(produtos);
-    } else if (tipo !== '') {
-      setFiltrados(produtos.filter((produto) => produto.categoria === tipo));
-    } else {
-      setFiltrados(produtos);
-    }
+  useMemo(() => {
+    const filtered =
+      tipo === 'todos' || !tipo
+        ? produtos
+        : produtos.filter((produto) => produto.categoria === tipo);
+    setFiltrados(filtered);
 
-    if (ordem === 'a-z') {
+    const sortMap = {
+      'a-z': (a: IProdutosData, b: IProdutosData) =>
+        a.nome.localeCompare(b.nome),
+      'z-a': (a: IProdutosData, b: IProdutosData) =>
+        b.nome.localeCompare(a.nome),
+      menor: (a: IProdutosData, b: IProdutosData) => a.preco - b.preco,
+      maior: (a: IProdutosData, b: IProdutosData) => b.preco - a.preco,
+    };
+
+    if (ordem && sortMap[ordem as keyof typeof sortMap]) {
       setFiltrados((prev) =>
-        [...prev].sort((a, b) => a.nome.localeCompare(b.nome))
+        [...prev].sort(sortMap[ordem as keyof typeof sortMap])
       );
-    } else if (ordem === 'z-a') {
-      setFiltrados((prev) =>
-        [...prev].sort((a, b) => b.nome.localeCompare(a.nome))
-      );
-    } else if (ordem === 'menor') {
-      setFiltrados((prev) => [...prev].sort((a, b) => a.preco - b.preco));
-    } else if (ordem === 'maior') {
-      setFiltrados((prev) => [...prev].sort((a, b) => b.preco - a.preco));
     }
-  }, [tipo, produtos, ordem]);
+  }, [ordem, produtos, tipo]);
 
   return (
     <>
