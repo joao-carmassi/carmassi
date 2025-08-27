@@ -51,6 +51,7 @@ const DialogPesquisaProdutos = () => {
   return (
     <Dialog onOpenChange={setOpen} open={isOpen}>
       <Button
+        aria-label='Botão abrir campo pesquisa'
         onClick={() => setOpen(true)}
         variant='outline'
         size='icon'

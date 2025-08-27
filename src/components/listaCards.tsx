@@ -1,19 +1,11 @@
 'use client';
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-} from '@/components/ui/card';
-import Link from 'next/link';
-import { Badge } from './ui/badge';
-import { IColaresData } from '@/app/layout';
-import Image from 'next/image';
+import { IProdutosData } from '@/app/layout';
 import { motion, Variants } from 'framer-motion';
+import ProdutoCard from './ui/produtoCard';
 
 type Props = {
-  colares: IColaresData[];
+  produtos: IProdutosData[];
 };
 
 const container: Variants = {
@@ -26,66 +18,16 @@ const container: Variants = {
   },
 };
 
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { type: 'spring', stiffness: 120, damping: 20 },
-  },
-};
-
-const ListaCards = ({ colares }: Props) => {
+const ListaCards = ({ produtos }: Props) => {
   return (
     <motion.div
       variants={container}
       initial='hidden'
-      whileInView='show'
-      viewport={{ once: true, margin: '-100px' }}
+      animate='show'
       className='grid w-full grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-12'
     >
-      {colares.map((colar, index) => (
-        <motion.div variants={fadeUp} key={index}>
-          <Link href={`/produtos/${colar.id}`}>
-            <Card className='group cursor-pointer duration-300 hover:scale-105 h-fit'>
-              <CardHeader>
-                <CardDescription>
-                  <Image
-                    width={260}
-                    height={260}
-                    src={`/placeholder.avif`}
-                    alt=''
-                    className='w-full object-cover object-center aspect-square'
-                  />
-                </CardDescription>
-              </CardHeader>
-              <CardContent className='flex flex-col gap-2'>
-                <div className='flex gap-1 flex-wrap'>
-                  {colar.tags.slice(0, 3).map((tag) => (
-                    <Badge
-                      variant={'outline'}
-                      className='border-primary text-primary font-semibold'
-                      key={tag}
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-                <p className='group-hover:underline text-sm md:text-base'>
-                  {colar.nome}
-                </p>
-                <p className='text-xs'>
-                  Por{' '}
-                  {colar.preco.toLocaleString('pt-br', {
-                    style: 'currency',
-                    currency: colar.moeda,
-                  })}{' '}
-                  {colar.moeda}
-                </p>
-              </CardContent>
-            </Card>
-          </Link>
-        </motion.div>
+      {produtos.map((produto) => (
+        <ProdutoCard key={produto.id} produto={produto} />
       ))}
     </motion.div>
   );

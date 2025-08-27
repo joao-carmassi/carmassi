@@ -3,7 +3,7 @@ import ListaCards from '@/components/listaCards';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { colaresData } from '@/app/layout';
+import { produtosData } from '@/app/layout';
 import { notFound } from 'next/navigation';
 
 interface Props {
@@ -14,32 +14,32 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   const { id } = await params;
-  const colar = colaresData.find((colar) => colar.id === id);
+  const produtos = produtosData.find((produto) => produto.id === id);
 
   return {
-    title: `${colar?.nome} - Carmassi`,
-    description: `Conheça o ${colar?.descricao}.`,
+    title: `${produtos?.nome} | Carmassi`,
+    description: `Conheça o ${produtos?.descricao}.`,
   };
 }
 
 const PaginaCompraProduto = async ({ params }: Props) => {
   const { id } = await params;
-  const colar = colaresData.find((colar) => colar.id === id);
+  const produto = produtosData.find((produto) => produto.id === id);
 
-  if (!colar) {
+  if (!produto) {
     return notFound();
   }
 
   return (
     <main className='min-h-screen'>
-      <ContainerProduto colar={colar} />
+      <ContainerProduto produtos={produto} />
       <section className='max-w-7xl mx-auto p-6 md:p-12 flex flex-col gap-6'>
         <ListaCards
-          colares={colaresData
+          produtos={produtosData
             .filter(
-              (xColar) =>
-                xColar.categoria === colar.categoria &&
-                xColar.nome !== colar.nome
+              (xProduto) =>
+                xProduto.categoria === produto.categoria &&
+                xProduto.nome !== produto.nome
             )
             .splice(0, 4)}
         />
@@ -58,8 +58,8 @@ const PaginaCompraProduto = async ({ params }: Props) => {
 };
 
 export async function generateStaticParams() {
-  return colaresData.map((colar) => ({
-    id: colar.id,
+  return produtosData.map((produto) => ({
+    id: produto.id,
   }));
 }
 

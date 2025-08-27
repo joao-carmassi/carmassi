@@ -1,9 +1,7 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { P } from '../ui/p';
-import BotaoCarrinho from '../ui/botaoCarrinho';
-import { User } from 'lucide-react';
-import DialogPesquisaProdutos from './dialogPesquisaProdutos';
+import BotoesNav from './botoesNav';
 
 const Navbar = () => {
   return (
@@ -15,18 +13,12 @@ const Navbar = () => {
               <P>Carmassi</P>
             </Link>
 
-            <Button variant={'link'} className='asChild'>
+            <Button asChild variant={'link'} className='asChild'>
               <Link href={'/produtos'}>Produtos</Link>
             </Button>
           </div>
 
-          <div className='flex items-center gap-3'>
-            <DialogPesquisaProdutos />
-            <BotaoCarrinho />
-            <Button variant='outline' size='icon' className='rounded-full'>
-              <User />
-            </Button>
-          </div>
+          <BotoesNav />
         </div>
       </nav>
     </header>

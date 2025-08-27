@@ -2,7 +2,7 @@ import { H1 } from '@/components/ui/h1';
 import { P } from '@/components/ui/p';
 import { Badge } from '@/components/ui/badge';
 import { Rating, RatingButton } from '@/components/ui/kibo-ui/rating';
-import { IColaresData } from '@/app/layout';
+import { IProdutosData } from '@/app/layout';
 import Image from 'next/image';
 import { CarroselPaginaProduto } from './carroselPaginaProduto';
 import InputFrete from './inputFrete';
@@ -11,7 +11,7 @@ import { Variants } from 'motion/react';
 import BotaoAdicioarCarrinho from '@/components/ui/BotaoAdicionarCarrinho';
 
 interface Props {
-  colar: IColaresData;
+  produtos: IProdutosData;
 }
 
 const fadeUp: Variants = {
@@ -23,7 +23,7 @@ const fadeUp: Variants = {
   },
 };
 
-const ContainerProduto = ({ colar }: Props) => {
+const ContainerProduto = ({ produtos }: Props) => {
   return (
     <SectionAnimation
       variants={fadeUp}
@@ -56,10 +56,10 @@ const ContainerProduto = ({ colar }: Props) => {
       </div>
       <div className='flex-1 flex flex-col gap-2 sticky top-[5.5rem] self-start text-lg'>
         <H1>
-          {colar?.nome} - {colar?.categoria}
+          {produtos?.nome} - {produtos?.categoria}
         </H1>
         <div className='flex gap-1 flex-wrap'>
-          {colar?.tags.map((tag) => (
+          {produtos?.tags.map((tag) => (
             <Badge
               variant={'outline'}
               className='border-primary text-primary font-semibold'
@@ -71,31 +71,31 @@ const ContainerProduto = ({ colar }: Props) => {
         </div>
         <P className='text-muted-foreground'>
           Por{' '}
-          {colar?.preco.toLocaleString('pt-br', {
+          {produtos?.preco.toLocaleString('pt-br', {
             style: 'currency',
-            currency: colar.moeda,
+            currency: produtos.moeda,
           })}{' '}
-          {colar?.moeda}
+          {produtos?.moeda}
         </P>
         <div className='flex gap-1'>
-          <Rating defaultValue={Math.round(colar?.nota as number)} readOnly>
+          <Rating defaultValue={Math.round(produtos?.nota as number)} readOnly>
             {Array.from({ length: 5 }).map((_, index) => (
               <RatingButton key={index} />
             ))}
           </Rating>
-          <p>({colar?.avaliacoes} avaliações)</p>
+          <p>({produtos?.avaliacoes} avaliações)</p>
         </div>
-        <BotaoAdicioarCarrinho produto={colar} />
+        <BotaoAdicioarCarrinho produto={produtos} />
         <InputFrete />
-        <p>{colar?.descricao}</p>
+        <p>{produtos?.descricao}</p>
         <div>
           <h2>Características:</h2>
           <ul className='list-disc list-inside '>
-            <li>Material: {colar?.caracteristicas.material}</li>
-            <li>Peso: {colar?.caracteristicas.peso}</li>
-            <li>Comprimento: {colar?.caracteristicas.comprimento}</li>
-            <li>Espessura: {colar?.caracteristicas.espessura}</li>
-            <li>Fecho: {colar?.caracteristicas.fecho}</li>
+            <li>Material: {produtos?.caracteristicas.material}</li>
+            <li>Peso: {produtos?.caracteristicas.peso}</li>
+            <li>Comprimento: {produtos?.caracteristicas.comprimento}</li>
+            <li>Espessura: {produtos?.caracteristicas.espessura}</li>
+            <li>Fecho: {produtos?.caracteristicas.fecho}</li>
           </ul>
         </div>
       </div>

@@ -4,10 +4,10 @@ import { ShoppingCart } from 'lucide-react';
 import { Button } from './button';
 import { useContext } from 'react';
 import { CartContext } from '@/context/carrinho';
-import { IColaresData } from '@/app/layout';
+import { IProdutosData } from '@/app/layout';
 
 interface Props {
-  produto: IColaresData;
+  produto: IProdutosData;
 }
 
 const BotaoAdicioarCarrinho = ({ produto }: Props) => {

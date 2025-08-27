@@ -1,31 +1,37 @@
 'use client';
 
-import { IColaresData } from '@/app/layout';
+import { v4 as uuidv4 } from 'uuid';
 import { createContext, useEffect, useState } from 'react';
+import { IProdutosData } from '@/app/layout';
+
+interface ICarrinho {
+  id: string;
+  produto: IProdutosData;
+}
 
 interface contextTypes {
-  cart: IColaresData[];
-  adicionaCarrinho: (cart: IColaresData) => void;
+  cart: ICarrinho[];
+  adicionaCarrinho: (cart: IProdutosData) => void;
   limpaCarrinho: () => void;
 }
 
 export const CartContext = createContext<contextTypes | null>(null);
 
 const CartProvider = ({ children }: { children: React.ReactNode }) => {
-  const [cart, setCart] = useState<IColaresData[]>([]);
+  const [cart, setCart] = useState<ICarrinho[]>([]);
 
   useEffect(() => {
     const localStorageCart = JSON.parse(localStorage.getItem('cart') || '[]');
     setCart(localStorageCart);
   }, []);
 
-  const adicionaCarrinho = (colar: IColaresData) => {
-    if (cart.find((item) => item.id === colar.id)) {
-      // return;
+  const adicionaCarrinho = (xProduto: IProdutosData) => {
+    if (cart.find((item) => item.produto.id === xProduto.id)) {
       console.log(cart);
     } else {
-      localStorage.setItem('cart', JSON.stringify([...cart, colar]));
-      setCart([...cart, colar]);
+      const produto: ICarrinho = { produto: xProduto, id: uuidv4() };
+      localStorage.setItem('cart', JSON.stringify([...cart, produto]));
+      setCart([...cart, produto]);
     }
   };
 

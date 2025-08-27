@@ -16,6 +16,7 @@ const BotaoCarrinho = () => {
         variant='outline'
         size='icon'
         className='rounded-full'
+        aria-label='Botão abrir pagina carrinho'
       >
         <ShoppingCart />
       </Button>
