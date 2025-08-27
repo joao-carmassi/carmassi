@@ -9,9 +9,17 @@ import InputFrete from './inputFrete';
 import SectionAnimation from '@/components/ui/sectionAnimation';
 import { Variants } from 'motion/react';
 import BotaoAdicioarCarrinho from '@/components/ui/BotaoAdicionarCarrinho';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 
 interface Props {
-  produtos: IProdutosData;
+  produto: IProdutosData;
 }
 
 const fadeUp: Variants = {
@@ -23,80 +31,97 @@ const fadeUp: Variants = {
   },
 };
 
-const ContainerProduto = ({ produtos }: Props) => {
+const ContainerProduto = ({ produto }: Props) => {
   return (
     <SectionAnimation
       variants={fadeUp}
       initial='hidden'
       whileInView='show'
       viewport={{ once: true }}
-      className='mx-auto max-w-7xl p-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12'
+      className='mx-auto max-w-7xl p-6 md:p-12'
     >
-      <div className='flex-1 hidden md:grid grid-cols-2 gap-3'>
-        <Image
-          height={750}
-          width={550}
-          src={`/placeholder.avif`}
-          alt=''
-          className='w-full object-cover object-center aspect-[9/12] col-span-2'
-        />
-        {Array.from({ length: 5 }).map((_, index) => (
+      <Breadcrumb className='pb-3'>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbLink href='/produtos'>Produtos</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>{produto.nome}</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+      <div className='flex flex-col md:flex-row gap-6 md:gap-12'>
+        <div className='flex-1 hidden md:grid grid-cols-2 gap-3'>
           <Image
-            key={index}
-            width={278}
-            height={278}
+            height={750}
+            width={550}
             src={`/placeholder.avif`}
             alt=''
-            className='w-full object-cover object-center aspect-square'
+            className='w-full object-cover object-center aspect-[9/12] col-span-2'
           />
-        ))}
-      </div>
-      <div className='w-full md:hidden'>
-        <CarroselPaginaProduto />
-      </div>
-      <div className='flex-1 flex flex-col gap-2 sticky top-[5.5rem] self-start text-lg'>
-        <H1>
-          {produtos?.nome} - {produtos?.categoria}
-        </H1>
-        <div className='flex gap-1 flex-wrap'>
-          {produtos?.tags.map((tag) => (
-            <Badge
-              variant={'outline'}
-              className='border-primary text-primary font-semibold'
-              key={tag}
-            >
-              {tag}
-            </Badge>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <Image
+              key={index}
+              width={278}
+              height={278}
+              src={`/placeholder.avif`}
+              alt=''
+              className='w-full object-cover object-center aspect-square'
+            />
           ))}
         </div>
-        <P className='text-muted-foreground'>
-          Por{' '}
-          {produtos?.preco.toLocaleString('pt-br', {
-            style: 'currency',
-            currency: produtos.moeda,
-          })}{' '}
-          {produtos?.moeda}
-        </P>
-        <div className='flex gap-1'>
-          <Rating defaultValue={Math.round(produtos?.nota as number)} readOnly>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <RatingButton key={index} />
-            ))}
-          </Rating>
-          <p>({produtos?.avaliacoes} avaliações)</p>
+        <div className='w-full md:hidden'>
+          <CarroselPaginaProduto />
         </div>
-        <BotaoAdicioarCarrinho produto={produtos} />
-        <InputFrete />
-        <p>{produtos?.descricao}</p>
-        <div>
-          <h2>Características:</h2>
-          <ul className='list-disc list-inside '>
-            <li>Material: {produtos?.caracteristicas.material}</li>
-            <li>Peso: {produtos?.caracteristicas.peso}</li>
-            <li>Comprimento: {produtos?.caracteristicas.comprimento}</li>
-            <li>Espessura: {produtos?.caracteristicas.espessura}</li>
-            <li>Fecho: {produtos?.caracteristicas.fecho}</li>
-          </ul>
+        <div className='flex-1 flex flex-col gap-2 sticky top-[5.5rem] self-start text-lg'>
+          <H1>
+            {produto?.nome} - {produto?.categoria}
+          </H1>
+          <div className='flex gap-1 flex-wrap'>
+            {produto?.tags.map((tag) => (
+              <Badge
+                variant={'outline'}
+                className='border-primary text-primary font-semibold'
+                key={tag}
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+          <P className='text-muted-foreground'>
+            Por{' '}
+            {produto?.preco.toLocaleString('pt-br', {
+              style: 'currency',
+              currency: produto.moeda,
+            })}{' '}
+            {produto?.moeda}
+          </P>
+          <div className='flex gap-1'>
+            <Rating defaultValue={Math.round(produto?.nota as number)} readOnly>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <RatingButton key={index} />
+              ))}
+            </Rating>
+            <p>({produto?.avaliacoes} avaliações)</p>
+          </div>
+          <BotaoAdicioarCarrinho produto={produto} />
+          <InputFrete />
+          <p>{produto?.descricao}</p>
+          <div>
+            <h2>Características:</h2>
+            <ul className='list-disc list-inside '>
+              <li>Material: {produto?.caracteristicas.material}</li>
+              <li>Peso: {produto?.caracteristicas.peso}</li>
+              <li>Comprimento: {produto?.caracteristicas.comprimento}</li>
+              <li>Espessura: {produto?.caracteristicas.espessura}</li>
+              <li>Fecho: {produto?.caracteristicas.fecho}</li>
+            </ul>
+          </div>
         </div>
       </div>
     </SectionAnimation>

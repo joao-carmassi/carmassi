@@ -12,7 +12,7 @@ const container: Variants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.075,
+      staggerChildren: 0.05,
       delayChildren: 0.15,
     },
   },

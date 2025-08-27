@@ -2,6 +2,14 @@ import { produtosData } from '../layout';
 import slugify from 'slugify';
 import { Metadata } from 'next';
 import ContainerFiltraProdutos from '../../components/containerFiltraProdutos';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 
 interface Props {
   searchParams: Promise<{
@@ -41,6 +49,17 @@ const PaginaPesquisa = async ({ searchParams }: Props) => {
   return (
     <main className='min-h-screen'>
       <section key={q} className='p-6 md:p-12 max-w-7xl mx-auto'>
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Pesquisa</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
         {filtrados.length > 0 ? (
           <ContainerFiltraProdutos tipos={tipos} produtos={filtrados} />
         ) : (

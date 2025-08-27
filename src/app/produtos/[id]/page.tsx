@@ -32,7 +32,7 @@ const PaginaCompraProduto = async ({ params }: Props) => {
 
   return (
     <main className='min-h-screen'>
-      <ContainerProduto produtos={produto} />
+      <ContainerProduto produto={produto} />
       <section className='max-w-7xl mx-auto p-6 md:p-12 flex flex-col gap-6'>
         <ListaCards
           produtos={produtosData

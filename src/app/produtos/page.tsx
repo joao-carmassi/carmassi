@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 import { produtosData } from '../layout';
 import ContainerFiltraProdutos from '../../components/containerFiltraProdutos';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Produtos | Carmassi',
@@ -25,7 +33,23 @@ const PageProdutos = async ({ searchParams }: Props) => {
   return (
     <main className='min-h-screen'>
       <section className='p-6 md:p-12 mx-auto max-w-7xl'>
-        <ContainerFiltraProdutos q={q} produtos={produtosData} tipos={tipo} />
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Produtos</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+        <ContainerFiltraProdutos
+          key={q}
+          q={q}
+          produtos={produtosData}
+          tipos={tipo}
+        />
       </section>
     </main>
   );
