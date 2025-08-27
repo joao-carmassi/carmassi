@@ -50,7 +50,7 @@ const PaginaCompraProduto = async ({ params }: Props) => {
           icon={ArrowRight}
           className='w-fit'
         >
-          <Link href={'/produtos'}>Ver mais</Link>
+          <Link href={`/produtos?q=${produto.categoria}`}>Ver mais</Link>
         </Button>
       </section>
     </main>

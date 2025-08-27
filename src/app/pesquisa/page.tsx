@@ -1,7 +1,7 @@
 import { produtosData } from '../layout';
 import slugify from 'slugify';
 import { Metadata } from 'next';
-import FiltraProdutos from './filtraProdutos';
+import ContainerFiltraProdutos from '../../components/containerFiltraProdutos';
 
 interface Props {
   searchParams: Promise<{
@@ -42,7 +42,7 @@ const PaginaPesquisa = async ({ searchParams }: Props) => {
     <main className='min-h-screen'>
       <section key={q} className='p-6 md:p-12 max-w-7xl mx-auto'>
         {filtrados.length > 0 ? (
-          <FiltraProdutos tipos={tipos} produtos={filtrados} />
+          <ContainerFiltraProdutos tipos={tipos} produtos={filtrados} />
         ) : (
           <p>Nenhum resultado encontrado</p>
         )}
