@@ -28,7 +28,7 @@ const ProdutoCard = ({ produto }: { produto: IProdutosData }) => {
     currency: produto.moeda,
   });
 
-  const cardTags = produto.tags.map((tag, index) => (
+  const cardTags = produto.tags.slice(0, 3).map((tag, index) => (
     <Badge
       key={index}
       variant='outline'

@@ -23,16 +23,20 @@ const ContainerBannerHome = () => {
     >
       <CarroselHeroHome className='pb-4'>
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem
-            className='md:pl-8 md:basis-[80%] h-72 md:h-[30rem]'
-            key={index}
-          >
+          <CarouselItem key={index} className='md:pl-8 md:basis-[80%]'>
             <Image
               width={1920}
               height={1200}
               src={`/placeholder.avif`}
               alt=''
-              className='w-full h-full object-cover object-center'
+              className='aspect-[21/9] w-full h-full object-cover object-center hidden md:block'
+            />
+            <Image
+              width={1920}
+              height={1200}
+              src={`/placeholder.avif`}
+              alt=''
+              className='aspect-[16/9] w-full h-full object-cover object-center md:hidden'
             />
           </CarouselItem>
         ))}

@@ -1,12 +1,12 @@
 [
   {
     "nome": "Corrente Ouro 18k 1",
-    "descricao": "Corrente de ouro 18k, Design elegante para ocasiões especiais.",
+    "descricao": "Corrente de ouro 18k, design elegante para ocasiões especiais.",
     "preco": 527.31,
     "moeda": "BRL",
     "nota": 4.3,
     "avaliacoes": 484,
-    "categoria": "Correntes Femininas",
+    "categoria": "corrente",
     "caracteristicas": {
       "material": "Ouro 18k",
       "peso": "12g",
@@ -19,7 +19,7 @@
       "https://meusite.com/produtos/corrente1-frente.jpg",
       "https://meusite.com/produtos/corrente1-detalhe.jpg"
     ],
-    "tags": ["ouro 18k", "joia", "acessório", "femininas"],
+    "tags": ["ouro 18k", "joia", "acessório", "feminina"],
     "promocao": {
       "desconto": 10,
       "precoPromocional": 474.58,
@@ -28,535 +28,544 @@
     "dataCadastro": "2025-01-07T16:48:34.689001"
   },
   {
-    "nome": "Corrente Titânio 2",
-    "descricao": "Corrente de titânio, Acabamento polido, ideal para uso diário.",
-    "preco": 404.37,
+    "nome": "Anel Prata 925",
+    "descricao": "Anel de prata 925 clássico, ideal para uso diário.",
+    "preco": 289.9,
     "moeda": "BRL",
-    "nota": 4.0,
-    "avaliacoes": 378,
-    "categoria": "Correntes Masculinas",
-    "caracteristicas": {
-      "material": "Titânio",
-      "peso": "32g",
-      "comprimento": "65cm",
-      "espessura": "2mm",
-      "fecho": "Imã"
-    },
-    "estoque": 36,
-    "imagens": [
-      "https://meusite.com/produtos/corrente2-frente.jpg",
-      "https://meusite.com/produtos/corrente2-detalhe.jpg"
-    ],
-    "tags": ["masculinas", "joia", "corrente", "titânio"],
-    "promocao": {
-      "desconto": 0,
-      "precoPromocional": null,
-      "validade": null
-    },
-    "dataCadastro": "2023-02-23T18:33:51.390176"
-  },
-  {
-    "nome": "Corrente Prata 925 3",
-    "descricao": "Corrente de prata 925, Modelo resistente e durável.",
-    "preco": 923.37,
-    "moeda": "BRL",
-    "nota": 4.0,
-    "avaliacoes": 108,
-    "categoria": "Correntes Unissex",
+    "nota": 4.5,
+    "avaliacoes": 210,
+    "categoria": "anel",
     "caracteristicas": {
       "material": "Prata 925",
-      "peso": "14g",
-      "comprimento": "55cm",
-      "espessura": "2mm",
-      "fecho": "Imã"
-    },
-    "estoque": 7,
-    "imagens": [
-      "https://meusite.com/produtos/corrente3-frente.jpg",
-      "https://meusite.com/produtos/corrente3-detalhe.jpg"
-    ],
-    "tags": ["unissex", "joia", "acessório", "prata 925"],
-    "promocao": {
-      "desconto": 20,
-      "precoPromocional": 738.7,
-      "validade": "2025-10-17"
-    },
-    "dataCadastro": "2025-05-06T07:06:43.516860"
-  },
-  {
-    "nome": "Corrente Aço Inox 4",
-    "descricao": "Corrente de aço inox, Acabamento polido, ideal para uso diário.",
-    "preco": 344.1,
-    "moeda": "BRL",
-    "nota": 3.5,
-    "avaliacoes": 65,
-    "categoria": "Correntes Unissex",
-    "caracteristicas": {
-      "material": "Aço Inox",
-      "peso": "55g",
-      "comprimento": "65cm",
-      "espessura": "5mm",
-      "fecho": "Imã"
-    },
-    "estoque": 20,
-    "imagens": [
-      "https://meusite.com/produtos/corrente4-frente.jpg",
-      "https://meusite.com/produtos/corrente4-detalhe.jpg"
-    ],
-    "tags": ["unissex", "joia", "moda", "aço inox"],
-    "promocao": {
-      "desconto": 15,
-      "precoPromocional": 292.49,
-      "validade": "2025-09-17"
-    },
-    "dataCadastro": "2023-06-11T11:37:13.003536"
-  },
-  {
-    "nome": "Corrente Couro 5",
-    "descricao": "Corrente de couro, Leve e confortável para o dia a dia.",
-    "preco": 307.1,
-    "moeda": "BRL",
-    "nota": 3.7,
-    "avaliacoes": 367,
-    "categoria": "Correntes Femininas",
-    "caracteristicas": {
-      "material": "Couro",
-      "peso": "52g",
-      "comprimento": "70cm",
-      "espessura": "4mm",
-      "fecho": "Mola"
-    },
-    "estoque": 11,
-    "imagens": [
-      "https://meusite.com/produtos/corrente5-frente.jpg",
-      "https://meusite.com/produtos/corrente5-detalhe.jpg"
-    ],
-    "tags": ["acessório", "couro", "femininas", "corrente"],
-    "promocao": {
-      "desconto": 20,
-      "precoPromocional": 245.68,
-      "validade": "2025-09-08"
-    },
-    "dataCadastro": "2024-05-08T23:07:17.582216"
-  },
-  {
-    "nome": "Corrente Ouro 18k 6",
-    "descricao": "Corrente de ouro 18k, Acabamento premium com brilho intenso.",
-    "preco": 567.53,
-    "moeda": "BRL",
-    "nota": 4.9,
-    "avaliacoes": 234,
-    "categoria": "Correntes Masculinas",
-    "caracteristicas": {
-      "material": "Ouro 18k",
-      "peso": "27g",
-      "comprimento": "60cm",
-      "espessura": "4mm",
-      "fecho": "Mola"
+      "peso": "8g",
+      "tamanho": "16",
+      "acabamento": "Polido"
     },
     "estoque": 12,
     "imagens": [
-      "https://meusite.com/produtos/corrente6-frente.jpg",
-      "https://meusite.com/produtos/corrente6-detalhe.jpg"
+      "https://meusite.com/produtos/anel1-frente.jpg",
+      "https://meusite.com/produtos/anel1-detalhe.jpg"
     ],
-    "tags": ["ouro 18k", "masculinas", "moda", "corrente"],
-    "promocao": {
-      "desconto": 15,
-      "precoPromocional": 482.4,
-      "validade": "2025-10-13"
-    },
-    "dataCadastro": "2023-02-14T14:55:45.981215"
-  },
-  {
-    "nome": "Corrente Titânio 7",
-    "descricao": "Corrente de titânio, Leve e confortável para o dia a dia.",
-    "preco": 244.8,
-    "moeda": "BRL",
-    "nota": 4.8,
-    "avaliacoes": 396,
-    "categoria": "Correntes Unissex",
-    "caracteristicas": {
-      "material": "Titânio",
-      "peso": "45g",
-      "comprimento": "45cm",
-      "espessura": "6mm",
-      "fecho": "Imã"
-    },
-    "estoque": 37,
-    "imagens": [
-      "https://meusite.com/produtos/corrente7-frente.jpg",
-      "https://meusite.com/produtos/corrente7-detalhe.jpg"
-    ],
-    "tags": ["unissex", "acessório", "corrente", "titânio"],
-    "promocao": {
-      "desconto": 0,
-      "precoPromocional": null,
-      "validade": null
-    },
-    "dataCadastro": "2023-06-01T15:05:15.328389"
-  },
-  {
-    "nome": "Corrente Prata 925 8",
-    "descricao": "Corrente de prata 925, Acabamento polido, ideal para uso diário.",
-    "preco": 861.42,
-    "moeda": "BRL",
-    "nota": 4.5,
-    "avaliacoes": 123,
-    "categoria": "Correntes Masculinas",
-    "caracteristicas": {
-      "material": "Prata 925",
-      "peso": "48g",
-      "comprimento": "65cm",
-      "espessura": "2mm",
-      "fecho": "Mola"
-    },
-    "estoque": 1,
-    "imagens": [
-      "https://meusite.com/produtos/corrente8-frente.jpg",
-      "https://meusite.com/produtos/corrente8-detalhe.jpg"
-    ],
-    "tags": ["masculinas", "acessório", "moda", "prata 925"],
-    "promocao": {
-      "desconto": 20,
-      "precoPromocional": 689.14,
-      "validade": "2025-10-10"
-    },
-    "dataCadastro": "2024-02-10T20:16:55.243387"
-  },
-  {
-    "nome": "Corrente Prata 925 9",
-    "descricao": "Corrente de prata 925, Design elegante para ocasiões especiais.",
-    "preco": 568.48,
-    "moeda": "BRL",
-    "nota": 3.7,
-    "avaliacoes": 111,
-    "categoria": "Correntes Masculinas",
-    "caracteristicas": {
-      "material": "Prata 925",
-      "peso": "16g",
-      "comprimento": "55cm",
-      "espessura": "4mm",
-      "fecho": "Lagosta"
-    },
-    "estoque": 8,
-    "imagens": [
-      "https://meusite.com/produtos/corrente9-frente.jpg",
-      "https://meusite.com/produtos/corrente9-detalhe.jpg"
-    ],
-    "tags": ["masculinas", "moda", "corrente", "prata 925"],
+    "tags": ["unissex", "prata 925", "joia", "clássico"],
     "promocao": {
       "desconto": 5,
-      "precoPromocional": 540.06,
-      "validade": "2025-09-30"
+      "precoPromocional": 275.41,
+      "validade": "2025-10-01"
     },
-    "dataCadastro": "2023-04-30T06:05:35.121182"
+    "dataCadastro": "2025-06-15T12:10:34.689001"
   },
   {
-    "nome": "Corrente Ouro 18k 10",
-    "descricao": "Corrente de ouro 18k, Modelo resistente e durável.",
-    "preco": 159.84,
+    "nome": "Colar Coração Ouro",
+    "descricao": "Colar de ouro com pingente de coração, delicado e sofisticado.",
+    "preco": 879.5,
     "moeda": "BRL",
-    "nota": 4.9,
-    "avaliacoes": 313,
-    "categoria": "Correntes Masculinas",
+    "nota": 4.8,
+    "avaliacoes": 157,
+    "categoria": "colar",
     "caracteristicas": {
       "material": "Ouro 18k",
-      "peso": "22g",
+      "peso": "10g",
       "comprimento": "45cm",
-      "espessura": "3mm",
       "fecho": "Lagosta"
     },
-    "estoque": 26,
+    "estoque": 5,
     "imagens": [
-      "https://meusite.com/produtos/corrente10-frente.jpg",
-      "https://meusite.com/produtos/corrente10-detalhe.jpg"
+      "https://meusite.com/produtos/colar1-frente.jpg",
+      "https://meusite.com/produtos/colar1-detalhe.jpg"
     ],
-    "tags": ["ouro 18k", "masculinas", "moda", "corrente"],
+    "tags": ["feminina", "ouro 18k", "romântico", "joia"],
+    "promocao": {
+      "desconto": 15,
+      "precoPromocional": 747.57,
+      "validade": "2025-09-30"
+    },
+    "dataCadastro": "2025-07-21T09:22:14.689001"
+  },
+  {
+    "nome": "Aliança Ouro 18k",
+    "descricao": "Aliança de ouro 18k lisa, símbolo clássico de união.",
+    "preco": 1450.0,
+    "moeda": "BRL",
+    "nota": 5.0,
+    "avaliacoes": 389,
+    "categoria": "aliança",
+    "caracteristicas": {
+      "material": "Ouro 18k",
+      "peso": "9g",
+      "espessura": "3mm",
+      "acabamento": "Liso"
+    },
+    "estoque": 18,
+    "imagens": [
+      "https://meusite.com/produtos/alianca1-frente.jpg",
+      "https://meusite.com/produtos/alianca1-detalhe.jpg"
+    ],
+    "tags": ["unissex", "ouro 18k", "casamento", "joia"],
+    "promocao": {
+      "desconto": 10,
+      "precoPromocional": 1305.0,
+      "validade": "2025-12-25"
+    },
+    "dataCadastro": "2025-08-01T20:44:12.689001"
+  },
+  {
+    "nome": "Solitário Diamante",
+    "descricao": "Anel solitário em ouro branco com diamante central.",
+    "preco": 3420.0,
+    "moeda": "BRL",
+    "nota": 5.0,
+    "avaliacoes": 76,
+    "categoria": "solitário",
+    "caracteristicas": {
+      "material": "Ouro branco 18k",
+      "peso": "6g",
+      "pedra": "Diamante 0.5ct",
+      "acabamento": "Polido"
+    },
+    "estoque": 4,
+    "imagens": [
+      "https://meusite.com/produtos/solitario1-frente.jpg",
+      "https://meusite.com/produtos/solitario1-detalhe.jpg"
+    ],
+    "tags": ["feminina", "diamante", "ouro branco", "luxo"],
+    "promocao": {
+      "desconto": 20,
+      "precoPromocional": 2736.0,
+      "validade": "2025-11-15"
+    },
+    "dataCadastro": "2025-05-19T15:30:45.689001"
+  },
+  {
+    "nome": "Pulseira Couro e Aço",
+    "descricao": "Pulseira moderna de couro com detalhes em aço inox.",
+    "preco": 199.9,
+    "moeda": "BRL",
+    "nota": 4.2,
+    "avaliacoes": 142,
+    "categoria": "pulseira",
+    "caracteristicas": {
+      "material": "Couro e aço inox",
+      "peso": "20g",
+      "comprimento": "22cm",
+      "fecho": "Imã"
+    },
+    "estoque": 22,
+    "imagens": [
+      "https://meusite.com/produtos/pulseira1-frente.jpg",
+      "https://meusite.com/produtos/pulseira1-detalhe.jpg"
+    ],
+    "tags": ["masculina", "moderna", "aço inox", "casual"],
+    "promocao": {
+      "desconto": 10,
+      "precoPromocional": 179.91,
+      "validade": "2025-09-12"
+    },
+    "dataCadastro": "2025-07-10T18:41:12.689001"
+  },
+  {
+    "nome": "Brinco Pérola",
+    "descricao": "Brincos delicados de pérola natural, sofisticados e elegantes.",
+    "preco": 459.0,
+    "moeda": "BRL",
+    "nota": 4.7,
+    "avaliacoes": 198,
+    "categoria": "brinco",
+    "caracteristicas": {
+      "material": "Prata 925 e pérola natural",
+      "peso": "4g",
+      "acabamento": "Polido"
+    },
+    "estoque": 10,
+    "imagens": [
+      "https://meusite.com/produtos/brinco1-frente.jpg",
+      "https://meusite.com/produtos/brinco1-detalhe.jpg"
+    ],
+    "tags": ["feminina", "pérola", "clássico", "joia"],
     "promocao": {
       "desconto": 0,
       "precoPromocional": null,
       "validade": null
     },
-    "dataCadastro": "2024-03-08T11:23:24.667753"
+    "dataCadastro": "2025-08-05T13:25:54.689001"
   },
   {
-    "nome": "Corrente Titânio 11",
-    "descricao": "Corrente de titânio, Acabamento polido, ideal para uso diário.",
-    "preco": 467.76,
+    "nome": "Corrente Prata Grossa",
+    "descricao": "Corrente de prata 925 com elos grossos, estilo urbano.",
+    "preco": 389.9,
     "moeda": "BRL",
     "nota": 4.4,
-    "avaliacoes": 302,
-    "categoria": "Correntes Femininas",
+    "avaliacoes": 267,
+    "categoria": "corrente",
     "caracteristicas": {
-      "material": "Titânio",
-      "peso": "57g",
-      "comprimento": "70cm",
-      "espessura": "4mm",
+      "material": "Prata 925",
+      "peso": "25g",
+      "comprimento": "55cm",
+      "espessura": "8mm",
       "fecho": "Lagosta"
     },
     "estoque": 15,
     "imagens": [
-      "https://meusite.com/produtos/corrente11-frente.jpg",
-      "https://meusite.com/produtos/corrente11-detalhe.jpg"
+      "https://meusite.com/produtos/corrente2-frente.jpg",
+      "https://meusite.com/produtos/corrente2-detalhe.jpg"
     ],
-    "tags": ["joia", "corrente", "femininas", "titânio"],
+    "tags": ["masculina", "prata 925", "urbano", "moderno"],
     "promocao": {
-      "desconto": 15,
-      "precoPromocional": 397.6,
-      "validade": "2025-08-24"
+      "desconto": 12,
+      "precoPromocional": 343.11,
+      "validade": "2025-10-15"
     },
-    "dataCadastro": "2024-08-17T18:26:50.652470"
+    "dataCadastro": "2025-06-20T14:30:22.689001"
   },
   {
-    "nome": "Corrente Aço Inox 12",
-    "descricao": "Corrente de aço inox, Acabamento premium com brilho intenso.",
-    "preco": 915.0,
-    "moeda": "BRL",
-    "nota": 3.7,
-    "avaliacoes": 249,
-    "categoria": "Correntes Femininas",
-    "caracteristicas": {
-      "material": "Aço Inox",
-      "peso": "44g",
-      "comprimento": "60cm",
-      "espessura": "5mm",
-      "fecho": "Gancho"
-    },
-    "estoque": 31,
-    "imagens": [
-      "https://meusite.com/produtos/corrente12-frente.jpg",
-      "https://meusite.com/produtos/corrente12-detalhe.jpg"
-    ],
-    "tags": ["acessório", "femininas", "aço inox", "corrente"],
-    "promocao": {
-      "desconto": 0,
-      "precoPromocional": null,
-      "validade": null
-    },
-    "dataCadastro": "2025-05-29T05:43:17.266497"
-  },
-  {
-    "nome": "Corrente Couro 13",
-    "descricao": "Corrente de couro, Acabamento premium com brilho intenso.",
-    "preco": 428.62,
-    "moeda": "BRL",
-    "nota": 4.4,
-    "avaliacoes": 457,
-    "categoria": "Correntes Femininas",
-    "caracteristicas": {
-      "material": "Couro",
-      "peso": "43g",
-      "comprimento": "50cm",
-      "espessura": "5mm",
-      "fecho": "Lagosta"
-    },
-    "estoque": 32,
-    "imagens": [
-      "https://meusite.com/produtos/corrente13-frente.jpg",
-      "https://meusite.com/produtos/corrente13-detalhe.jpg"
-    ],
-    "tags": ["acessório", "couro", "moda", "femininas"],
-    "promocao": {
-      "desconto": 5,
-      "precoPromocional": 407.19,
-      "validade": "2025-09-10"
-    },
-    "dataCadastro": "2023-09-08T14:40:08.777681"
-  },
-  {
-    "nome": "Corrente Couro 14",
-    "descricao": "Corrente de couro, Design elegante para ocasiões especiais.",
-    "preco": 524.03,
+    "nome": "Anel Esmeralda",
+    "descricao": "Anel em ouro amarelo com esmeralda natural e diamantes.",
+    "preco": 2890.0,
     "moeda": "BRL",
     "nota": 4.9,
-    "avaliacoes": 491,
-    "categoria": "Correntes Masculinas",
+    "avaliacoes": 89,
+    "categoria": "anel",
     "caracteristicas": {
-      "material": "Couro",
-      "peso": "45g",
-      "comprimento": "65cm",
-      "espessura": "6mm",
-      "fecho": "Gancho"
-    },
-    "estoque": 6,
-    "imagens": [
-      "https://meusite.com/produtos/corrente14-frente.jpg",
-      "https://meusite.com/produtos/corrente14-detalhe.jpg"
-    ],
-    "tags": ["masculinas", "joia", "couro", "corrente"],
-    "promocao": {
-      "desconto": 5,
-      "precoPromocional": 497.83,
-      "validade": "2025-09-16"
-    },
-    "dataCadastro": "2024-12-29T02:55:25.508448"
-  },
-  {
-    "nome": "Corrente Titânio 15",
-    "descricao": "Corrente de titânio, Acabamento premium com brilho intenso.",
-    "preco": 468.44,
-    "moeda": "BRL",
-    "nota": 3.6,
-    "avaliacoes": 429,
-    "categoria": "Correntes Masculinas",
-    "caracteristicas": {
-      "material": "Titânio",
-      "peso": "54g",
-      "comprimento": "65cm",
-      "espessura": "6mm",
-      "fecho": "Mola"
-    },
-    "estoque": 21,
-    "imagens": [
-      "https://meusite.com/produtos/corrente15-frente.jpg",
-      "https://meusite.com/produtos/corrente15-detalhe.jpg"
-    ],
-    "tags": ["masculinas", "acessório", "moda", "titânio"],
-    "promocao": {
-      "desconto": 20,
-      "precoPromocional": 374.75,
-      "validade": "2025-08-25"
-    },
-    "dataCadastro": "2024-08-20T05:18:20.963448"
-  },
-  {
-    "nome": "Corrente Titânio 16",
-    "descricao": "Corrente de titânio, Acabamento polido, ideal para uso diário.",
-    "preco": 830.33,
-    "moeda": "BRL",
-    "nota": 4.8,
-    "avaliacoes": 22,
-    "categoria": "Correntes Masculinas",
-    "caracteristicas": {
-      "material": "Titânio",
-      "peso": "48g",
-      "comprimento": "55cm",
-      "espessura": "5mm",
-      "fecho": "Lagosta"
+      "material": "Ouro 18k e esmeralda",
+      "peso": "7g",
+      "pedra": "Esmeralda 1ct",
+      "acabamento": "Polido"
     },
     "estoque": 3,
     "imagens": [
-      "https://meusite.com/produtos/corrente16-frente.jpg",
-      "https://meusite.com/produtos/corrente16-detalhe.jpg"
+      "https://meusite.com/produtos/anel2-frente.jpg",
+      "https://meusite.com/produtos/anel2-detalhe.jpg"
     ],
-    "tags": ["masculinas", "moda", "corrente", "titânio"],
+    "tags": ["feminina", "esmeralda", "ouro 18k", "luxo"],
     "promocao": {
-      "desconto": 20,
-      "precoPromocional": 664.26,
-      "validade": "2025-09-24"
+      "desconto": 8,
+      "precoPromocional": 2658.8,
+      "validade": "2025-11-30"
     },
-    "dataCadastro": "2023-08-13T08:11:54.604668"
+    "dataCadastro": "2025-04-12T11:15:33.689001"
   },
   {
-    "nome": "Corrente Prata 925 17",
-    "descricao": "Corrente de prata 925, Modelo resistente e durável.",
-    "preco": 761.43,
+    "nome": "Colar Choker Veludo",
+    "descricao": "Choker de veludo preto com pingente de lua em prata.",
+    "preco": 129.9,
     "moeda": "BRL",
-    "nota": 3.7,
-    "avaliacoes": 31,
-    "categoria": "Correntes Masculinas",
+    "nota": 4.1,
+    "avaliacoes": 324,
+    "categoria": "colar",
     "caracteristicas": {
-      "material": "Prata 925",
-      "peso": "31g",
-      "comprimento": "50cm",
-      "espessura": "4mm",
-      "fecho": "Mola"
+      "material": "Veludo e prata 925",
+      "peso": "15g",
+      "comprimento": "35cm",
+      "fecho": "Ajustável"
     },
-    "estoque": 34,
+    "estoque": 28,
     "imagens": [
-      "https://meusite.com/produtos/corrente17-frente.jpg",
-      "https://meusite.com/produtos/corrente17-detalhe.jpg"
+      "https://meusite.com/produtos/choker1-frente.jpg",
+      "https://meusite.com/produtos/choker1-detalhe.jpg"
     ],
-    "tags": ["masculinas", "joia", "moda", "prata 925"],
+    "tags": ["feminina", "gótico", "moderno", "jovem"],
     "promocao": {
-      "desconto": 0,
-      "precoPromocional": null,
-      "validade": null
+      "desconto": 15,
+      "precoPromocional": 110.42,
+      "validade": "2025-09-25"
     },
-    "dataCadastro": "2023-09-02T08:27:03.542126"
+    "dataCadastro": "2025-07-03T16:22:11.689001"
   },
   {
-    "nome": "Corrente Ouro 18k 18",
-    "descricao": "Corrente de ouro 18k, Modelo resistente e durável.",
-    "preco": 731.53,
-    "moeda": "BRL",
-    "nota": 4.2,
-    "avaliacoes": 346,
-    "categoria": "Correntes Femininas",
-    "caracteristicas": {
-      "material": "Ouro 18k",
-      "peso": "35g",
-      "comprimento": "60cm",
-      "espessura": "3mm",
-      "fecho": "Lagosta"
-    },
-    "estoque": 13,
-    "imagens": [
-      "https://meusite.com/produtos/corrente18-frente.jpg",
-      "https://meusite.com/produtos/corrente18-detalhe.jpg"
-    ],
-    "tags": ["ouro 18k", "acessório", "moda", "femininas"],
-    "promocao": {
-      "desconto": 20,
-      "precoPromocional": 585.22,
-      "validade": "2025-09-20"
-    },
-    "dataCadastro": "2024-11-25T15:22:04.569631"
-  },
-  {
-    "nome": "Corrente Ouro 18k 19",
-    "descricao": "Corrente de ouro 18k, Acabamento premium com brilho intenso.",
-    "preco": 182.73,
-    "moeda": "BRL",
-    "nota": 4.9,
-    "avaliacoes": 83,
-    "categoria": "Correntes Masculinas",
-    "caracteristicas": {
-      "material": "Ouro 18k",
-      "peso": "34g",
-      "comprimento": "45cm",
-      "espessura": "4mm",
-      "fecho": "Mola"
-    },
-    "estoque": 7,
-    "imagens": [
-      "https://meusite.com/produtos/corrente19-frente.jpg",
-      "https://meusite.com/produtos/corrente19-detalhe.jpg"
-    ],
-    "tags": ["ouro 18k", "acessório", "joia", "masculinas"],
-    "promocao": {
-      "desconto": 0,
-      "precoPromocional": null,
-      "validade": null
-    },
-    "dataCadastro": "2023-09-01T14:46:01.734836"
-  },
-  {
-    "nome": "Corrente Aço Inox 20",
-    "descricao": "Corrente de aço inox, Acabamento polido, ideal para uso diário.",
-    "preco": 881.96,
+    "nome": "Pulseira Tênis Diamantes",
+    "descricao": "Pulseira tênis em ouro branco com diamantes lapidação brilhante.",
+    "preco": 4250.0,
     "moeda": "BRL",
     "nota": 5.0,
-    "avaliacoes": 124,
-    "categoria": "Correntes Unissex",
+    "avaliacoes": 45,
+    "categoria": "pulseira",
     "caracteristicas": {
-      "material": "Aço Inox",
-      "peso": "26g",
-      "comprimento": "50cm",
-      "espessura": "3mm",
-      "fecho": "Imã"
+      "material": "Ouro branco 18k e diamantes",
+      "peso": "18g",
+      "comprimento": "18cm",
+      "pedras": "Diamantes 2ct total"
     },
-    "estoque": 44,
+    "estoque": 2,
     "imagens": [
-      "https://meusite.com/produtos/corrente20-frente.jpg",
-      "https://meusite.com/produtos/corrente20-detalhe.jpg"
+      "https://meusite.com/produtos/pulseira2-frente.jpg",
+      "https://meusite.com/produtos/pulseira2-detalhe.jpg"
     ],
-    "tags": ["unissex", "joia", "acessório", "aço inox"],
+    "tags": ["feminina", "diamantes", "ouro branco", "luxo"],
+    "promocao": {
+      "desconto": 0,
+      "precoPromocional": null,
+      "validade": null
+    },
+    "dataCadastro": "2025-03-28T09:45:17.689001"
+  },
+  {
+    "nome": "Brinco Argola Grande",
+    "descricao": "Brincos de argola grande em aço inoxidável dourado.",
+    "preco": 89.9,
+    "moeda": "BRL",
+    "nota": 4.0,
+    "avaliacoes": 412,
+    "categoria": "brinco",
+    "caracteristicas": {
+      "material": "Aço inoxidável dourado",
+      "peso": "6g",
+      "diâmetro": "5cm",
+      "acabamento": "Dourado"
+    },
+    "estoque": 45,
+    "imagens": [
+      "https://meusite.com/produtos/brinco2-frente.jpg",
+      "https://meusite.com/produtos/brinco2-detalhe.jpg"
+    ],
+    "tags": ["feminina", "moderno", "casual", "dourado"],
     "promocao": {
       "desconto": 20,
-      "precoPromocional": 705.57,
-      "validade": "2025-08-19"
+      "precoPromocional": 71.92,
+      "validade": "2025-08-30"
     },
-    "dataCadastro": "2023-09-13T21:21:02.073154"
+    "dataCadastro": "2025-05-14T13:18:44.689001"
+  },
+  {
+    "nome": "Relógio Ouro Feminino",
+    "descricao": "Relógio feminino em ouro 18k com mostrador madrepérola.",
+    "preco": 3890.0,
+    "moeda": "BRL",
+    "nota": 4.8,
+    "avaliacoes": 123,
+    "categoria": "relógio",
+    "caracteristicas": {
+      "material": "Ouro 18k",
+      "peso": "45g",
+      "mostrador": "Madrepérola",
+      "movimento": "Quartzo suíço"
+    },
+    "estoque": 6,
+    "imagens": [
+      "https://meusite.com/produtos/relogio1-frente.jpg",
+      "https://meusite.com/produtos/relogio1-detalhe.jpg"
+    ],
+    "tags": ["feminina", "ouro 18k", "luxo", "suíço"],
+    "promocao": {
+      "desconto": 10,
+      "precoPromocional": 3501.0,
+      "validade": "2025-12-15"
+    },
+    "dataCadastro": "2025-02-18T10:33:55.689001"
+  },
+  {
+    "nome": "Pingente Cruz Prata",
+    "descricao": "Pingente de cruz em prata 925 com detalhes vazados.",
+    "preco": 159.9,
+    "moeda": "BRL",
+    "nota": 4.6,
+    "avaliacoes": 289,
+    "categoria": "pingente",
+    "caracteristicas": {
+      "material": "Prata 925",
+      "peso": "3g",
+      "altura": "3cm",
+      "acabamento": "Oxidado"
+    },
+    "estoque": 35,
+    "imagens": [
+      "https://meusite.com/produtos/pingente1-frente.jpg",
+      "https://meusite.com/produtos/pingente1-detalhe.jpg"
+    ],
+    "tags": ["unissex", "religioso", "prata 925", "clássico"],
+    "promocao": {
+      "desconto": 5,
+      "precoPromocional": 151.91,
+      "validade": "2025-10-20"
+    },
+    "dataCadastro": "2025-06-08T15:27:38.689001"
+  },
+  {
+    "nome": "Tornozeleira Dourada",
+    "descricao": "Tornozeleira delicada folheada a ouro com pingentes.",
+    "preco": 79.9,
+    "moeda": "BRL",
+    "nota": 4.2,
+    "avaliacoes": 156,
+    "categoria": "tornozeleira",
+    "caracteristicas": {
+      "material": "Folheado a ouro",
+      "peso": "8g",
+      "comprimento": "25cm",
+      "fecho": "Lagosta"
+    },
+    "estoque": 20,
+    "imagens": [
+      "https://meusite.com/produtos/tornozeleira1-frente.jpg",
+      "https://meusite.com/produtos/tornozeleira1-detalhe.jpg"
+    ],
+    "tags": ["feminina", "verão", "dourado", "delicado"],
+    "promocao": {
+      "desconto": 25,
+      "precoPromocional": 59.93,
+      "validade": "2025-09-10"
+    },
+    "dataCadastro": "2025-07-15T12:41:29.689001"
+  },
+  {
+    "nome": "Anel Signet Masculino",
+    "descricao": "Anel signet masculino em aço inoxidável com gravação personalizada.",
+    "preco": 249.9,
+    "moeda": "BRL",
+    "nota": 4.3,
+    "avaliacoes": 178,
+    "categoria": "anel",
+    "caracteristicas": {
+      "material": "Aço inoxidável",
+      "peso": "12g",
+      "tamanho": "20",
+      "acabamento": "Escovado"
+    },
+    "estoque": 25,
+    "imagens": [
+      "https://meusite.com/produtos/anel3-frente.jpg",
+      "https://meusite.com/produtos/anel3-detalhe.jpg"
+    ],
+    "tags": ["masculina", "personalizado", "aço inox", "moderno"],
+    "promocao": {
+      "desconto": 15,
+      "precoPromocional": 212.42,
+      "validade": "2025-11-05"
+    },
+    "dataCadastro": "2025-04-25T17:52:16.689001"
+  },
+  {
+    "nome": "Colar Pérolas Cultivadas",
+    "descricao": "Colar clássico de pérolas cultivadas com fecho em ouro.",
+    "preco": 1290.0,
+    "moeda": "BRL",
+    "nota": 4.9,
+    "avaliacoes": 234,
+    "categoria": "colar",
+    "caracteristicas": {
+      "material": "Pérolas cultivadas e ouro 18k",
+      "peso": "35g",
+      "comprimento": "42cm",
+      "tamanho_perolas": "8mm"
+    },
+    "estoque": 8,
+    "imagens": [
+      "https://meusite.com/produtos/colar2-frente.jpg",
+      "https://meusite.com/produtos/colar2-detalhe.jpg"
+    ],
+    "tags": ["feminina", "clássico", "pérolas", "elegante"],
+    "promocao": {
+      "desconto": 0,
+      "precoPromocional": null,
+      "validade": null
+    },
+    "dataCadastro": "2025-01-22T08:14:47.689001"
+  },
+  {
+    "nome": "Pulseira Couro Trançado",
+    "descricao": "Pulseira masculina de couro trançado com fecho magnético.",
+    "preco": 149.9,
+    "moeda": "BRL",
+    "nota": 4.1,
+    "avaliacoes": 298,
+    "categoria": "pulseira",
+    "caracteristicas": {
+      "material": "Couro genuíno",
+      "peso": "15g",
+      "comprimento": "21cm",
+      "fecho": "Magnético"
+    },
+    "estoque": 40,
+    "imagens": [
+      "https://meusite.com/produtos/pulseira3-frente.jpg",
+      "https://meusite.com/produtos/pulseira3-detalhe.jpg"
+    ],
+    "tags": ["masculina", "couro", "casual", "resistente"],
+    "promocao": {
+      "desconto": 18,
+      "precoPromocional": 122.92,
+      "validade": "2025-08-15"
+    },
+    "dataCadastro": "2025-05-30T19:36:21.689001"
+  },
+  {
+    "nome": "Brinco Cristal Swarovski",
+    "descricao": "Brincos com cristais Swarovski em formato de gota.",
+    "preco": 329.9,
+    "moeda": "BRL",
+    "nota": 4.7,
+    "avaliacoes": 167,
+    "categoria": "brinco",
+    "caracteristicas": {
+      "material": "Prata 925 e cristal Swarovski",
+      "peso": "5g",
+      "formato": "Gota",
+      "acabamento": "Ródio"
+    },
+    "estoque": 18,
+    "imagens": [
+      "https://meusite.com/produtos/brinco3-frente.jpg",
+      "https://meusite.com/produtos/brinco3-detalhe.jpg"
+    ],
+    "tags": ["feminina", "cristal", "elegante", "brilhante"],
+    "promocao": {
+      "desconto": 12,
+      "precoPromocional": 290.31,
+      "validade": "2025-10-08"
+    },
+    "dataCadastro": "2025-03-15T14:28:53.689001"
+  },
+  {
+    "nome": "Corrente Cartier Ouro",
+    "descricao": "Corrente modelo cartier em ouro 18k, clássica e versátil.",
+    "preco": 890.0,
+    "moeda": "BRL",
+    "nota": 4.6,
+    "avaliacoes": 356,
+    "categoria": "corrente",
+    "caracteristicas": {
+      "material": "Ouro 18k",
+      "peso": "15g",
+      "comprimento": "50cm",
+      "espessura": "2mm",
+      "fecho": "Lagosta"
+    },
+    "estoque": 12,
+    "imagens": [
+      "https://meusite.com/produtos/corrente3-frente.jpg",
+      "https://meusite.com/produtos/corrente3-detalhe.jpg"
+    ],
+    "tags": ["unissex", "ouro 18k", "clássico", "versátil"],
+    "promocao": {
+      "desconto": 8,
+      "precoPromocional": 818.8,
+      "validade": "2025-12-01"
+    },
+    "dataCadastro": "2025-02-05T11:47:32.689001"
+  },
+  {
+    "nome": "Anel Turmalina Rosa",
+    "descricao": "Anel feminino com turmalina rosa e diamantes laterais.",
+    "preco": 1890.0,
+    "moeda": "BRL",
+    "nota": 4.8,
+    "avaliacoes": 92,
+    "categoria": "anel",
+    "caracteristicas": {
+      "material": "Ouro rosé 18k e turmalina",
+      "peso": "6g",
+      "pedra": "Turmalina rosa 2ct",
+      "acabamento": "Polido"
+    },
+    "estoque": 5,
+    "imagens": [
+      "https://meusite.com/produtos/anel4-frente.jpg",
+      "https://meusite.com/produtos/anel4-detalhe.jpg"
+    ],
+    "tags": ["feminina", "turmalina", "ouro rosé", "romântico"],
+    "promocao": {
+      "desconto": 6,
+      "precoPromocional": 1776.6,
+      "validade": "2025-11-20"
+    },
+    "dataCadastro": "2025-04-08T16:19:25.689001"
   }
 ]

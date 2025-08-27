@@ -36,11 +36,13 @@ const PaginaPesquisa = async ({ searchParams }: Props) => {
     return nomeMatch || tagMatch;
   });
 
+  const tipos = ['todos', ...new Set(filtrados.map((obj) => obj.categoria))];
+
   return (
     <main className='min-h-screen'>
       <section key={q} className='p-6 md:p-12 max-w-7xl mx-auto'>
         {filtrados.length > 0 ? (
-          <FiltraProdutos produtos={filtrados} />
+          <FiltraProdutos tipos={tipos} produtos={filtrados} />
         ) : (
           <p>Nenhum resultado encontrado</p>
         )}
