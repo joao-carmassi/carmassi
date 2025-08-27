@@ -29,6 +29,7 @@ const ContainerProduto = ({ colar }: Props) => {
       variants={fadeUp}
       initial='hidden'
       whileInView='show'
+      viewport={{ once: true }}
       className='mx-auto max-w-7xl p-6 md:p-12 flex flex-col md:flex-row gap-6 md:gap-12'
     >
       <div className='flex-1 hidden md:grid grid-cols-2 gap-3'>

@@ -2,7 +2,8 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { P } from '../ui/p';
 import BotaoCarrinho from '../ui/botaoCarrinho';
-import { Search, User } from 'lucide-react';
+import { User } from 'lucide-react';
+import DialogPesquisaProdutos from './dialogPesquisaProdutos';
 
 const Navbar = () => {
   return (
@@ -20,9 +21,7 @@ const Navbar = () => {
           </div>
 
           <div className='flex items-center gap-3'>
-            <Button variant='outline' size='icon' className='rounded-full'>
-              <Search />
-            </Button>
+            <DialogPesquisaProdutos />
             <BotaoCarrinho />
             <Button variant='outline' size='icon' className='rounded-full'>
               <User />

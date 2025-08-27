@@ -6,6 +6,7 @@ import Footer from '@/components/footer';
 import jsonColares from '@/data/colares.json';
 import slugify from 'slugify';
 import CartProvider from '@/context/carrinho';
+import ProductsProvider from '@/context/produtos';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -32,10 +33,12 @@ export default function RootLayout({
     <html lang='pt-BR'>
       <body className={`${raleway.variable} font-raleway tracking-widest`}>
         <CartProvider>
-          <Navbar />
-          <div className='h-16' />
-          {children}
-          <Footer />
+          <ProductsProvider colares={colaresData}>
+            <Navbar />
+            <div className='h-16' />
+            {children}
+            <Footer />
+          </ProductsProvider>
         </CartProvider>
       </body>
     </html>
