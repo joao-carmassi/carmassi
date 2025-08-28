@@ -31,7 +31,7 @@ const PageProdutos = async ({ searchParams }: Props) => {
   const { q } = (await searchParams) || '';
 
   return (
-    <main className='min-h-screen'>
+    <main className='min-h-container'>
       <section className='p-6 md:p-12 mx-auto max-w-7xl'>
         <Breadcrumb>
           <BreadcrumbList>

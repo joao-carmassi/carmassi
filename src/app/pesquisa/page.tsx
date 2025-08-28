@@ -47,7 +47,7 @@ const PaginaPesquisa = async ({ searchParams }: Props) => {
   const tipos = ['todos', ...new Set(filtrados.map((obj) => obj.categoria))];
 
   return (
-    <main className='min-h-screen'>
+    <main className='min-h-container'>
       <section key={q} className='p-6 md:p-12 max-w-7xl mx-auto'>
         <Breadcrumb>
           <BreadcrumbList>

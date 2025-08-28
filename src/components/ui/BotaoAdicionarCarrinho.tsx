@@ -19,6 +19,7 @@ const BotaoAdicioarCarrinho = ({ produto }: Props) => {
       iconPlacement='right'
       icon={ShoppingCart}
       effect={'expandIcon'}
+      className='w-full'
     >
       Adicionar ao carrinho
     </Button>

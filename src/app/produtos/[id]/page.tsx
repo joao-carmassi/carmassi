@@ -30,29 +30,31 @@ const PaginaCompraProduto = async ({ params }: Props) => {
     return notFound();
   }
 
+  const similares = produtosData
+    .filter(
+      (xProduto) =>
+        xProduto.categoria === produto.categoria &&
+        xProduto.nome !== produto.nome
+    )
+    .splice(0, 4);
+
   return (
-    <main className='min-h-screen'>
+    <main className='min-h-container'>
       <ContainerProduto produto={produto} />
-      <section className='max-w-7xl mx-auto p-6 md:p-12 flex flex-col gap-6'>
-        <ListaCards
-          produtos={produtosData
-            .filter(
-              (xProduto) =>
-                xProduto.categoria === produto.categoria &&
-                xProduto.nome !== produto.nome
-            )
-            .splice(0, 4)}
-        />
-        <Button
-          asChild
-          effect={'expandIcon'}
-          iconPlacement='right'
-          icon={ArrowRight}
-          className='w-fit'
-        >
-          <Link href={`/produtos?q=${produto.categoria}`}>Ver mais</Link>
-        </Button>
-      </section>
+      {similares.length > 0 && (
+        <section className='max-w-7xl mx-auto p-6 md:p-12 flex flex-col gap-6'>
+          <ListaCards produtos={similares} />
+          <Button
+            asChild
+            effect={'expandIcon'}
+            iconPlacement='right'
+            icon={ArrowRight}
+            className='w-fit'
+          >
+            <Link href={`/produtos?q=${produto.categoria}`}>Ver mais</Link>
+          </Button>
+        </section>
+      )}
     </main>
   );
 };

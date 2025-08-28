@@ -12,7 +12,7 @@ const produtos = produtosData.slice(0, 8);
 
 export default function Home() {
   return (
-    <main className='min-h-screen'>
+    <main className='min-h-container'>
       <ContainerBannerHome />
       <section className='flex items-center flex-col max-w-7xl mx-auto p-6 md:p-12 gap-6'>
         <ListaCards produtos={produtos} />

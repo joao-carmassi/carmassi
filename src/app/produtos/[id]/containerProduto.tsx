@@ -78,7 +78,7 @@ const ContainerProduto = ({ produto }: Props) => {
         <div className='w-full md:hidden'>
           <CarroselPaginaProduto />
         </div>
-        <div className='flex-1 flex flex-col gap-2 sticky top-[5.5rem] self-start text-lg'>
+        <div className='flex-1 space-y-3 sticky top-[5.5rem] self-start text-lg'>
           <H1>
             {produto?.nome} - {produto?.categoria}
           </H1>
@@ -114,7 +114,7 @@ const ContainerProduto = ({ produto }: Props) => {
           <p>{produto?.descricao}</p>
           <div>
             <h2>Características:</h2>
-            <ul className='list-disc list-inside '>
+            <ul className='list-disc list-inside'>
               <li>Material: {produto?.caracteristicas.material}</li>
               <li>Peso: {produto?.caracteristicas.peso}</li>
               <li>Comprimento: {produto?.caracteristicas.comprimento}</li>
