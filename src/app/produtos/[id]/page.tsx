@@ -5,6 +5,14 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { produtosData } from '@/app/layout';
 import { notFound } from 'next/navigation';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
 
 interface Props {
   params: Promise<{
@@ -40,7 +48,24 @@ const PaginaCompraProduto = async ({ params }: Props) => {
 
   return (
     <main className='min-h-container'>
-      <ContainerProduto produto={produto} />
+      <section className='mx-auto max-w-7xl p-6 md:p-12'>
+        <Breadcrumb className='pb-3'>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href='/produtos'>Produtos</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage>{produto.nome}</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+        <ContainerProduto produto={produto} />
+      </section>
       {similares.length > 0 && (
         <section className='max-w-7xl mx-auto p-6 md:p-12 flex flex-col gap-6'>
           <ListaCards produtos={similares} />

@@ -4,21 +4,21 @@ import { v4 as uuidv4 } from 'uuid';
 import { createContext, useEffect, useState } from 'react';
 import { IProdutosData } from '@/app/layout';
 
-interface ICarrinho {
+export interface ICarrinho {
   id: string;
   quantidade: number;
   produto: IProdutosData;
 }
 
-interface contextTypes {
+export interface cartContextTypes {
   cart: ICarrinho[];
   adicionaCarrinho: (cart: IProdutosData) => void;
-  removeCarrinho: (id: string) => void;
+  removeDoCarrinho: (id: string) => void;
   alteraQuantidade: (id: string, quantidade: number) => void;
   limpaCarrinho: () => void;
 }
 
-export const CartContext = createContext<contextTypes | null>(null);
+export const CartContext = createContext<cartContextTypes | null>(null);
 
 interface Props {
   children: React.ReactNode;
@@ -46,7 +46,7 @@ const CartProvider = ({ children }: Props) => {
     }
   };
 
-  const removeCarrinho = (id: string) => {
+  const removeDoCarrinho = (id: string) => {
     const newCart = cart.filter((item) => item.id !== id);
     localStorage.setItem('cart', JSON.stringify(newCart));
     setCart(newCart);
@@ -72,7 +72,7 @@ const CartProvider = ({ children }: Props) => {
       value={{
         cart,
         adicionaCarrinho,
-        removeCarrinho,
+        removeDoCarrinho,
         alteraQuantidade,
         limpaCarrinho,
       }}

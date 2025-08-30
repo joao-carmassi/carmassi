@@ -10,6 +10,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import CampoBuscaPesquisa from './campoBuscaPesquisa';
 
 interface Props {
   searchParams: Promise<{
@@ -48,7 +49,7 @@ const PaginaPesquisa = async ({ searchParams }: Props) => {
 
   return (
     <main className='min-h-container'>
-      <section key={q} className='p-6 md:p-12 max-w-7xl mx-auto'>
+      <section className='p-6 md:p-12 max-w-7xl mx-auto'>
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -60,10 +61,13 @@ const PaginaPesquisa = async ({ searchParams }: Props) => {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
+        <CampoBuscaPesquisa q={q} />
         {filtrados.length > 0 ? (
-          <ContainerFiltraProdutos tipos={tipos} produtos={filtrados} />
+          <div key={q}>
+            <ContainerFiltraProdutos tipos={tipos} produtos={filtrados} />
+          </div>
         ) : (
-          <p>Nenhum resultado encontrado</p>
+          <p className='mt-3'>Nenhum resultado encontrado</p>
         )}
       </section>
     </main>

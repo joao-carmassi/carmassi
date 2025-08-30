@@ -6,17 +6,9 @@ import { IProdutosData } from '@/app/layout';
 import Image from 'next/image';
 import { CarroselPaginaProduto } from './carroselPaginaProduto';
 import InputFrete from './inputFrete';
-import SectionAnimation from '@/components/ui/sectionAnimation';
 import { Variants } from 'motion/react';
 import BotaoAdicioarCarrinho from '@/components/ui/BotaoAdicionarCarrinho';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
+import DivAnimation from '@/components/ui/divAnimation';
 
 interface Props {
   produto: IProdutosData;
@@ -33,28 +25,12 @@ const fadeUp: Variants = {
 
 const ContainerProduto = ({ produto }: Props) => {
   return (
-    <SectionAnimation
+    <DivAnimation
       variants={fadeUp}
       initial='hidden'
       whileInView='show'
       viewport={{ once: true }}
-      className='mx-auto max-w-7xl p-6 md:p-12'
     >
-      <Breadcrumb className='pb-3'>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink href='/'>Home</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbLink href='/produtos'>Produtos</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>{produto.nome}</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
       <div className='flex flex-col md:flex-row gap-6 md:gap-12'>
         <div className='flex-1 hidden md:grid grid-cols-2 gap-3'>
           <Image
@@ -124,7 +100,7 @@ const ContainerProduto = ({ produto }: Props) => {
           </div>
         </div>
       </div>
-    </SectionAnimation>
+    </DivAnimation>
   );
 };
 

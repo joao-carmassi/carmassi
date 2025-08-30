@@ -42,3 +42,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+/* TODO: 
+  ! Colocar H1, H2 e H3 pelas paginas
+  ! Pesquisa relogio e n aparece
+*/

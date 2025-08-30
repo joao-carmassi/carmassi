@@ -2,16 +2,10 @@
 
 import { Search } from 'lucide-react';
 import { Button } from '../ui/button';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '../ui/dialog';
-import { Input } from '../ui/input';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../ui/dialog';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import InputBuscaProduto from '../ui/inputBuscaProduto';
 
 const DialogPesquisaProdutos = () => {
   const [isOpen, setOpen] = useState(false);
@@ -65,18 +59,11 @@ const DialogPesquisaProdutos = () => {
       >
         <DialogHeader>
           <DialogTitle hidden>Pesquisar produto</DialogTitle>
-          <DialogDescription className='flex items-center h-full w-full max-w-xl mx-auto'>
-            <Input
-              id='search'
-              placeholder='Digite o nome do produto...'
-              className='flex-1 h-10'
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-            />
-            <Button onClick={handleClick} size='sm' className='h-10'>
-              <Search className='h-4 w-4' />
-            </Button>
-          </DialogDescription>
+          <InputBuscaProduto
+            handleClick={handleClick}
+            inputValue={inputValue}
+            setInputValue={setInputValue}
+          />
         </DialogHeader>
       </DialogContent>
     </Dialog>
