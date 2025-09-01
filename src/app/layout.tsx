@@ -44,6 +44,7 @@ export default function RootLayout({
 }
 
 /* TODO: 
-  ! Colocar H1, H2 e H3 pelas paginas
+  ! Colocar H1, H2 e H3 pelas paginas - Homepage, Pesquisa e Produtos
   ! Pesquisa relogio e n aparece
+  ? Light house
 */

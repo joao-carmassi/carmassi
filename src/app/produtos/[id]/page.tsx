@@ -26,7 +26,9 @@ export async function generateMetadata({ params }: Props) {
 
   return {
     title: `${produtos?.nome} | Carmassi`,
-    description: `Conheça o ${produtos?.descricao}.`,
+    description: `Conheça o ${produtos?.descricao}. ${produtos?.tags.join(
+      ', '
+    )}`,
   };
 }
 
