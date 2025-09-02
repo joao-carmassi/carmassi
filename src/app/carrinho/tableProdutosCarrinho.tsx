@@ -79,8 +79,8 @@ const TableProdutosCarrinho = () => {
                 >
                   <TableCell className='py-2.5 font-medium flex gap-3 items-center'>
                     <Image
-                      width={260}
-                      height={260}
+                      width={56}
+                      height={56}
                       src={`/placeholder.avif`}
                       alt={item.produto.nome}
                       className='w-14 h-14 object-cover object-center'
@@ -104,7 +104,10 @@ const TableProdutosCarrinho = () => {
                           }}
                           value={item.quantidade.toString()}
                         >
-                          <SelectTrigger className='shadow-none'>
+                          <SelectTrigger
+                            aria-label={`Trocar quantidade ${item.produto.nome}`}
+                            className='shadow-none'
+                          >
                             <SelectValue />
                           </SelectTrigger>
                           <SelectContent>
@@ -139,7 +142,10 @@ const TableProdutosCarrinho = () => {
                       }}
                       value={item.quantidade.toString()}
                     >
-                      <SelectTrigger className='shadow-none'>
+                      <SelectTrigger
+                        aria-label={`Trocar quantidade ${item.produto.nome}`}
+                        className='shadow-none'
+                      >
                         <SelectValue placeholder='Quantidade' />
                       </SelectTrigger>
                       <SelectContent>

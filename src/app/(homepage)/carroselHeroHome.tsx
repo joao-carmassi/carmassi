@@ -57,7 +57,6 @@ export default function CarroselHeroHome({ children, className }: Props) {
       <div className='mt-4 flex items-center justify-center md:justify-end gap-2 mx-4'>
         {Array.from({ length: count }).map((_, index) => (
           <button
-            aria-label={`Imagem carrosel ${index + 1}`}
             key={index}
             onClick={() => api?.scrollTo(index)}
             className={cn('h-3.5 w-3.5 rounded-full border-2 cursor-pointer', {

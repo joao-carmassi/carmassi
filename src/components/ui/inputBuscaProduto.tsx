@@ -35,6 +35,7 @@ const InputBuscaProduto = ({
           onChange={(e) => setInputValue(e.target.value)}
         />
         <Button
+          aria-label='Limpar campo de busca'
           onClick={() => {
             setInputValue('');
             inputReff.current?.focus();
@@ -46,7 +47,12 @@ const InputBuscaProduto = ({
           <X className='!size-2.5' />
         </Button>
       </div>
-      <Button onClick={handleClick} size='sm' className='h-10'>
+      <Button
+        aria-label='Pesquisar'
+        onClick={handleClick}
+        size='sm'
+        className='h-10'
+      >
         <Search className='h-4 w-4' />
       </Button>
     </div>

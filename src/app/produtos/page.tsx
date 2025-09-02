@@ -9,6 +9,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import { H1 } from '@/components/ui/h1';
 
 export const metadata: Metadata = {
   title: 'Produtos | Carmassi',
@@ -44,6 +45,7 @@ const PageProdutos = async ({ searchParams }: Props) => {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
+        <H1 className='hidden mt-3'>Todos os Produtos</H1>
         <ContainerFiltraProdutos
           key={q}
           q={q}

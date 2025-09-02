@@ -11,6 +11,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import CampoBuscaPesquisa from './campoBuscaPesquisa';
+import { H1 } from '@/components/ui/h1';
 
 interface Props {
   searchParams: Promise<{
@@ -32,16 +33,19 @@ export async function generateMetadata({
 
 const PaginaPesquisa = async ({ searchParams }: Props) => {
   const { q } = await searchParams;
+
   const filtrados = produtosData.filter((produto) => {
-    const nomeMatch = produto.nome
-      .toLowerCase()
-      .trim()
-      .includes(q.toLowerCase().trim());
+    const nomeMatch = slugify(produto.nome, {
+      lower: true,
+      strict: true,
+    }).includes(slugify(q, { lower: true }));
+
     const tagMatch = produto.tags.some((tag) =>
-      slugify(tag, { strict: true, lower: true }).includes(
-        slugify(q, { strict: true, lower: true })
+      slugify(tag, { lower: true, strict: true }).includes(
+        slugify(q, { lower: true, strict: true })
       )
     );
+
     return nomeMatch || tagMatch;
   });
 
@@ -61,13 +65,19 @@ const PaginaPesquisa = async ({ searchParams }: Props) => {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
+        <H1 className='hidden mt-3'>Pesquisar Produtos</H1>
         <CampoBuscaPesquisa q={q} />
         {filtrados.length > 0 ? (
           <div key={q}>
             <ContainerFiltraProdutos tipos={tipos} produtos={filtrados} />
           </div>
         ) : (
-          <p className='mt-3'>Nenhum resultado encontrado</p>
+          <div className='mt-6'>
+            <H1>Nenhum resultado encontrado</H1>
+            <p className='text-muted-foreground'>
+              Tente buscar por outros termos ou navegue por nossas categorias.
+            </p>
+          </div>
         )}
       </section>
     </main>

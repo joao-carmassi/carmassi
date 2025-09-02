@@ -29,7 +29,7 @@ const FiltroProdutos = ({
       <div className='flex items-center gap-3'>
         <p>Filtrar:</p>
         <Select value={tipo} onValueChange={setTipo}>
-          <SelectTrigger className='w-[180px]'>
+          <SelectTrigger aria-label='Filtro tipo' className='w-[180px]'>
             <SelectValue placeholder='Tipo' />
           </SelectTrigger>
           <SelectContent>
@@ -41,7 +41,7 @@ const FiltroProdutos = ({
           </SelectContent>
         </Select>
         <Select value={ordem} onValueChange={setOrdem}>
-          <SelectTrigger className='w-[180px]'>
+          <SelectTrigger aria-label='Filtro ordem' className='w-[180px]'>
             <SelectValue placeholder='Ordem' />
           </SelectTrigger>
           <SelectContent>

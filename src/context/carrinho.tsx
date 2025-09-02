@@ -22,15 +22,20 @@ export const CartContext = createContext<cartContextTypes | null>(null);
 
 interface Props {
   children: React.ReactNode;
+  produtos: IProdutosData[];
 }
 
-const CartProvider = ({ children }: Props) => {
+const CartProvider = ({ children, produtos }: Props) => {
   const [cart, setCart] = useState<ICarrinho[]>([]);
 
   useEffect(() => {
     const localStorageCart = JSON.parse(localStorage.getItem('cart') || '[]');
-    setCart(localStorageCart);
-  }, []);
+    const cartWithProducts = localStorageCart.filter((item: ICarrinho) => {
+      return produtos.find((produto) => produto.id === item.produto.id);
+    });
+    localStorage.setItem('cart', JSON.stringify(cartWithProducts));
+    setCart(cartWithProducts);
+  }, [produtos]);
 
   const adicionaCarrinho = (xProduto: IProdutosData) => {
     if (cart.find((item) => item.produto.id === xProduto.id)) {

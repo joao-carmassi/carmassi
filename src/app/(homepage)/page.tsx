@@ -7,6 +7,7 @@ import ContainerInfoInfiniteSliderHome from './containerInfoInfiniteSliderHome';
 import ContainerInfoGridFotos from './containerInfoGridFotos';
 import { produtosData } from '../layout';
 import ContainerTeste from './containerTeste';
+import { H1 } from '@/components/ui/h1';
 
 const produtos = produtosData.slice(0, 8);
 
@@ -15,6 +16,7 @@ export default function Home() {
     <main className='min-h-container'>
       <ContainerBannerHome />
       <section className='flex items-center flex-col max-w-7xl mx-auto p-6 md:p-12 gap-6'>
+        <H1 className='hidden'>Joias e Acessórios Exclusivos</H1>
         <ListaCards produtos={produtos} />
         <Button
           asChild

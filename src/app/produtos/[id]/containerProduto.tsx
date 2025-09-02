@@ -78,7 +78,11 @@ const ContainerProduto = ({ produto }: Props) => {
             {produto?.moeda}
           </P>
           <div className='flex gap-1'>
-            <Rating defaultValue={Math.round(produto?.nota as number)} readOnly>
+            <Rating
+              aria-hidden='true'
+              defaultValue={Math.round(produto?.nota as number)}
+              readOnly
+            >
               {Array.from({ length: 5 }).map((_, index) => (
                 <RatingButton key={index} />
               ))}

@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/nav';
-import Footer from '@/components/footer';
 import jsonProdutos from '@/data/produtos.json';
 import slugify from 'slugify';
 import CartProvider from '@/context/carrinho';
+import Footer from '@/components/footer';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 export const produtosData = jsonProdutos.map((item) => ({
-  id: slugify(item.nome, { strict: true, lower: true }),
+  id: slugify(`${item.nome}`, { strict: true, lower: true }),
   ...item,
 }));
 export type IProdutosData = (typeof produtosData)[0];
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang='pt-BR'>
       <body className={`${raleway.variable} font-raleway tracking-widest`}>
-        <CartProvider>
+        <CartProvider produtos={produtosData}>
           <Navbar />
           <div className='h-16' />
           {children}
@@ -42,9 +42,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-/* TODO: 
-  ! Colocar H1, H2 e H3 pelas paginas - Homepage, Pesquisa e Produtos
-  ! Pesquisa relogio e n aparece
-  ? Light house
-*/
