@@ -20,7 +20,7 @@ const ContainerTeste = () => {
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.5 }}
-        className='max-w-7xl mx-auto p-6 md:p-12 text-center flex flex-col gap-6 items-center'
+        className='max-w-7xl mx-auto p-6 md:p-12 text-center flex flex-col gap-3 md:gap-6 items-center'
       >
         <H2>Lorem</H2>
         <p>

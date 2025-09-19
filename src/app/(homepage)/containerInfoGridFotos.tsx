@@ -5,16 +5,16 @@ import Image from 'next/image';
 import { Variants } from 'framer-motion';
 import DivAnimation from '@/components/ui/divAnimation';
 
-const fadeRight: Variants = {
-  hidden: { opacity: 0, x: -40 },
+const textAnimation: Variants = {
+  hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: { type: 'spring', stiffness: 120, damping: 20 },
   },
 };
 
-const fadeLeft: Variants = {
+const imgAnimation: Variants = {
   hidden: { opacity: 0, x: 40 },
   show: {
     opacity: 1,
@@ -27,11 +27,11 @@ const ContainerInfoGridFotos = () => {
   return (
     <section className='flex items-center flex-col lg:flex-row max-w-7xl mx-auto p-6 md:p-12 gap-6 h-[40rem] md:h-[55rem] lg:h-[35rem]'>
       <DivAnimation
-        variants={fadeRight}
+        variants={textAnimation}
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 1 }}
-        className='lg:flex-1 flex flex-col gap-6 text-start items-start'
+        className='lg:flex-1 flex flex-col gap-3 md:gap-6 text-start items-start'
       >
         <H2>Welcome to Our Website</H2>
         <P className='text-muted-foreground'>
@@ -42,7 +42,7 @@ const ContainerInfoGridFotos = () => {
         <Button effect={'ringHover'}>lorem</Button>
       </DivAnimation>
       <DivAnimation
-        variants={fadeLeft}
+        variants={imgAnimation}
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.1 }}

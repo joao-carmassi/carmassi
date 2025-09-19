@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { produtosData } from '../layout';
+import { categoriasProtudos, produtosData } from '../layout';
 import ContainerFiltraProdutos from '../../components/containerFiltraProdutos';
 import {
   Breadcrumb,
@@ -16,11 +16,6 @@ export const metadata: Metadata = {
   description:
     'Explore nossa coleção completa de colares, brincos e acessórios exclusivos. Peças únicas e elegantes para todos os gostos.',
 };
-
-const tipo = [
-  'todos',
-  ...new Set(produtosData.map((produto) => produto.categoria)),
-];
 
 interface Props {
   searchParams: Promise<{
@@ -50,7 +45,7 @@ const PageProdutos = async ({ searchParams }: Props) => {
           key={q}
           q={q}
           produtos={produtosData}
-          tipos={tipo}
+          tipos={categoriasProtudos}
         />
       </section>
     </main>

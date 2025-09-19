@@ -1,5 +1,4 @@
-import { produtosData } from '../layout';
-import slugify from 'slugify';
+import { categoriasProtudos, produtosData } from '../layout';
 import { Metadata } from 'next';
 import ContainerFiltraProdutos from '../../components/containerFiltraProdutos';
 import {
@@ -12,6 +11,7 @@ import {
 } from '@/components/ui/breadcrumb';
 import CampoBuscaPesquisa from './campoBuscaPesquisa';
 import { H1 } from '@/components/ui/h1';
+import slugifyPathern from '@/utils/slugifyPathern';
 
 interface Props {
   searchParams: Promise<{
@@ -35,21 +35,14 @@ const PaginaPesquisa = async ({ searchParams }: Props) => {
   const { q } = await searchParams;
 
   const filtrados = produtosData.filter((produto) => {
-    const nomeMatch = slugify(produto.nome, {
-      lower: true,
-      strict: true,
-    }).includes(slugify(q, { lower: true }));
+    const nomeMatch = slugifyPathern(produto.nome).includes(slugifyPathern(q));
 
     const tagMatch = produto.tags.some((tag) =>
-      slugify(tag, { lower: true, strict: true }).includes(
-        slugify(q, { lower: true, strict: true })
-      )
+      slugifyPathern(tag).includes(slugifyPathern(q))
     );
 
     return nomeMatch || tagMatch;
   });
-
-  const tipos = ['todos', ...new Set(filtrados.map((obj) => obj.categoria))];
 
   return (
     <main className='min-h-container'>
@@ -66,13 +59,16 @@ const PaginaPesquisa = async ({ searchParams }: Props) => {
           </BreadcrumbList>
         </Breadcrumb>
         <H1 className='hidden mt-3'>Pesquisar Produtos</H1>
-        <CampoBuscaPesquisa q={q} />
+        <span key={q}>
+          <CampoBuscaPesquisa q={q} />
+        </span>
         {filtrados.length > 0 ? (
-          <div key={q}>
-            <ContainerFiltraProdutos tipos={tipos} produtos={filtrados} />
-          </div>
+          <ContainerFiltraProdutos
+            tipos={categoriasProtudos}
+            produtos={filtrados}
+          />
         ) : (
-          <div className='mt-6'>
+          <div className='mt-6 spacey-1.5 md:space-y-3'>
             <H1>Nenhum resultado encontrado</H1>
             <p className='text-muted-foreground'>
               Tente buscar por outros termos ou navegue por nossas categorias.

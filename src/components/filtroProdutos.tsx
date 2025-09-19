@@ -9,18 +9,18 @@ import { IProdutosData } from '../app/layout';
 
 type Props = {
   filtrados: IProdutosData[];
-  tipos: string[];
-  tipo: string;
-  setTipo: (tipo: string) => void;
+  categorias: string[];
+  q: string;
+  setCategoria: (tipo: string) => void;
   ordem: string;
   setOrdem: (ordem: string) => void;
 };
 
 const FiltroProdutos = ({
   filtrados,
-  tipos,
-  tipo,
-  setTipo,
+  categorias,
+  q,
+  setCategoria,
   ordem,
   setOrdem,
 }: Props) => {
@@ -28,12 +28,12 @@ const FiltroProdutos = ({
     <div className='flex flex-col md:flex-row justify-between md:items-center gap-3 py-3'>
       <div className='flex items-center gap-3'>
         <p>Filtrar:</p>
-        <Select value={tipo} onValueChange={setTipo}>
+        <Select value={q} onValueChange={setCategoria}>
           <SelectTrigger aria-label='Filtro tipo' className='w-[180px]'>
-            <SelectValue placeholder='Tipo' />
+            <SelectValue placeholder='Categoria' />
           </SelectTrigger>
           <SelectContent>
-            {tipos?.map((tipo) => (
+            {categorias?.map((tipo) => (
               <SelectItem key={tipo} value={tipo}>
                 {tipo}
               </SelectItem>

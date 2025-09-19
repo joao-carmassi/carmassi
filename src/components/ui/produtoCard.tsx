@@ -41,7 +41,7 @@ const ProdutoCard = ({ produto }: { produto: IProdutosData }) => {
   return (
     <motion.div variants={fadeUp}>
       <Link href={`/produtos/${produto.id}`}>
-        <Card className='group cursor-pointer duration-300 hover:scale-105 h-fit'>
+        <Card className='group cursor-pointer duration-300 hover:scale-105 h-fit shadow-lg'>
           <CardHeader>
             <CardDescription>
               <Image

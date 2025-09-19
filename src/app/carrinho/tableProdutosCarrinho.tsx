@@ -215,7 +215,7 @@ const TableProdutosCarrinho = () => {
           </div>
         </>
       ) : (
-        <div className='flex flex-col items-center '>
+        <div className='text-center space-y-1.5 md:space-y-3'>
           <p>Seu carrinho está vazio.</p>
           <p>Adicione alguns produtos para continuar com a compra!</p>
           <Button
@@ -223,7 +223,7 @@ const TableProdutosCarrinho = () => {
             icon={ArrowRight}
             iconPlacement='right'
             asChild
-            className='w-full flex-1 md:flex-none md:w-auto mt-3'
+            className='w-full md:w-fit'
           >
             <Link href={'/produtos'}>Ver mais produtos</Link>
           </Button>

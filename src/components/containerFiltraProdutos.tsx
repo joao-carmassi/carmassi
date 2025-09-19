@@ -13,14 +13,14 @@ type Props = {
 
 const ContainerFiltraProdutos = ({ produtos, tipos, q }: Props) => {
   const [filtrados, setFiltrados] = useState(produtos);
-  const [tipo, setTipo] = useState<string>(q || '');
+  const [categoria, setCategoria] = useState<string>(q || '');
   const [ordem, setOrdem] = useState<string>('');
 
   useMemo(() => {
     const filtered =
-      tipo === 'todos' || !tipo
+      categoria === 'todos' || !categoria
         ? produtos
-        : produtos.filter((produto) => produto.categoria === tipo);
+        : produtos.filter((produto) => produto.categoria === categoria);
     setFiltrados(filtered);
 
     const sortMap = {
@@ -37,7 +37,7 @@ const ContainerFiltraProdutos = ({ produtos, tipos, q }: Props) => {
         [...prev].sort(sortMap[ordem as keyof typeof sortMap])
       );
     }
-  }, [ordem, produtos, tipo]);
+  }, [ordem, produtos, categoria]);
 
   return (
     <>
@@ -45,9 +45,9 @@ const ContainerFiltraProdutos = ({ produtos, tipos, q }: Props) => {
         filtrados={filtrados}
         ordem={ordem}
         setOrdem={setOrdem}
-        tipo={tipo}
-        setTipo={setTipo}
-        tipos={tipos as string[]}
+        q={categoria}
+        setCategoria={setCategoria}
+        categorias={['todos', ...tipos] as string[]}
       />
       <ListaCards produtos={filtrados} />
     </>

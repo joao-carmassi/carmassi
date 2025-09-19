@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Variants } from 'framer-motion';
 import DivAnimation from '@/components/ui/divAnimation';
 
-const fadeRight: Variants = {
+const imgAnimation: Variants = {
   hidden: { opacity: 0, x: -40 },
   show: {
     opacity: 1,
@@ -15,11 +15,11 @@ const fadeRight: Variants = {
   },
 };
 
-const fadeLeft: Variants = {
-  hidden: { opacity: 0, x: 40 },
+const textAnimation: Variants = {
+  hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: { type: 'spring', stiffness: 120, damping: 20 },
   },
 };
@@ -28,11 +28,11 @@ const ContainerInfoInfiniteSliderHome = () => {
   return (
     <section className='p-6 md:p-12 gap-6 md:gap-12 max-w-7xl mx-auto flex items-center flex-col md:flex-row-reverse'>
       <DivAnimation
-        variants={fadeLeft}
+        variants={textAnimation}
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 1 }}
-        className='flex-1 flex flex-col gap-6 items-start'
+        className='flex-1 flex flex-col gap-3 md:gap-6 items-start'
       >
         <H2>Revolutionizing Client Collaboration for Modern Services</H2>
         <P className='text-muted-foreground'>
@@ -42,7 +42,7 @@ const ContainerInfoInfiniteSliderHome = () => {
         <Button effect={'ringHover'}>Lorem</Button>
       </DivAnimation>
       <DivAnimation
-        variants={fadeRight}
+        variants={imgAnimation}
         initial='hidden'
         whileInView='show'
         viewport={{ once: true, amount: 0.1 }}
@@ -85,7 +85,7 @@ const ContainerInfoInfiniteSliderHome = () => {
         </InfiniteSlider>
         <InfiniteSlider
           speedOnHover={15}
-          speed={50}
+          speed={30}
           className='w-full h-full md:hidden'
           direction='horizontal'
         >
@@ -96,13 +96,13 @@ const ContainerInfoInfiniteSliderHome = () => {
               height={120}
               src={`/placeholder.avif`}
               alt=''
-              className='object-cover object-center aspect-square h-36 md:h-fit md:w-full'
+              className='object-cover object-center w-36 h-36'
             />
           ))}
         </InfiniteSlider>
         <InfiniteSlider
           speedOnHover={15}
-          speed={50}
+          speed={30}
           className='w-full h-full md:hidden'
           direction='horizontal'
           reverse
@@ -114,7 +114,7 @@ const ContainerInfoInfiniteSliderHome = () => {
               height={120}
               src={`/placeholder.avif`}
               alt=''
-              className='object-cover object-center aspect-square h-36 md:h-fit md:w-full'
+              className='object-cover object-center w-36 h-36'
             />
           ))}
         </InfiniteSlider>
