@@ -50,9 +50,8 @@ export default function RootLayout({
 }
 
 /* TODO:
-  ?- Animacao cards login register
-  !- Validacao lado do server login e register
-  ?- Drop down menu user
-  !- Registrar marca
-  - CMS
+  ?- Pagina edita dados perfile
+  ?- Troca produtos pro CMS
+  ?- Armazenar dados produtos usario cms
+  ?- Sistema de pagamento e notificacao por zapp
 */

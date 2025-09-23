@@ -31,7 +31,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       const token = await getToken();
       if (token) {
         const res = await getUser({ token });
-        console.log(res);
         if (res.status === 'success' && res.data) {
           setUser(res.data);
         } else {
