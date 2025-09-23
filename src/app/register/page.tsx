@@ -87,7 +87,7 @@ const Register = () => {
             </CardTitle>
           </CardHeader>
           <CardContent className='px-8 space-y-1.5'>
-            <div className='grid gap-5 '>
+            <div className='grid gap-5'>
               <div className='grid w-full items-center gap-2'>
                 <Label className='text-muted-foreground' htmlFor='username'>
                   Nome de usuario

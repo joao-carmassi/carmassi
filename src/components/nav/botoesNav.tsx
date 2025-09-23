@@ -76,13 +76,17 @@ const BotoesNav = () => {
               <>
                 <DropdownMenuLabel>{user.user?.email}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem className='grup'>
-                  <User className='mr-2 h-4 w-4 group-hover:text-card' />
-                  Perfil
+                <DropdownMenuItem asChild className='grup'>
+                  <Link href='/perfil'>
+                    <User className='mr-2 h-4 w-4 group-hover:text-card' />
+                    Perfil
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className='grup'>
-                  <PackageCheck className='mr-2 h-4 w-4 group-hover:text-card' />
-                  Meus pedidos
+                <DropdownMenuItem asChild className='grup'>
+                  <Link href={'/pedidos'}>
+                    <PackageCheck className='mr-2 h-4 w-4 group-hover:text-card' />
+                    Meus pedidos
+                  </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem

@@ -30,6 +30,7 @@ const ContainerBannerHome = () => {
               src={`/placeholder.avif`}
               alt=''
               className='aspect-[21/9] w-full h-full object-cover object-center hidden md:block'
+              priority
             />
             <Image
               width={1920}
@@ -37,6 +38,7 @@ const ContainerBannerHome = () => {
               src={`/placeholder.avif`}
               alt=''
               className='aspect-[16/9] w-full h-full object-cover object-center md:hidden'
+              priority
             />
           </CarouselItem>
         ))}

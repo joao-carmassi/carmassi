@@ -51,7 +51,14 @@ export default function RootLayout({
 
 /* TODO:
   ?- Pagina edita dados perfile
+  ?- layout paginas login, register, perfil e produtos
+  ?- animacao perfil e produtos
+  ?- validacao de email
+  ?- input senha
+  ?- Verificar msg de erro de resposta do servidor
+  ?- Trocar msgs do servidor para pt
+  ?- Alterar esstrutura dados produtos
   ?- Troca produtos pro CMS
   ?- Armazenar dados produtos usario cms
-  ?- Sistema de pagamento e notificacao por zapp
+  *- Sistema de pagamento e notificacao por zapp
 */
