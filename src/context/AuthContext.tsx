@@ -2,8 +2,9 @@
 
 import { getToken, removeToken, setToken } from '@/actions/auth';
 import getUser from '@/actions/baixaDadosUser';
+import logaUsuario from '@/actions/login';
+import { iApiResponse } from '@/interface/iApiResponse';
 import { iUser } from '@/interface/iUser';
-import { useRouter } from 'next/navigation';
 import {
   createContext,
   useContext,
@@ -17,21 +18,24 @@ type tLoading = 'loading' | 'authenticated' | 'unauthenticated';
 interface AuthContextProps {
   user: iUser | null;
   loading: tLoading;
-  login: (user: iUser, remember: boolean) => Promise<void>;
+  login: (
+    identifier: string,
+    password: string,
+    remember: boolean
+  ) => Promise<iApiResponse>;
   logout: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextProps>({
   user: null,
   loading: 'loading',
-  login: async () => {},
+  login: async () => ({ status: 'error', data: null, errorMessage: null }),
   logout: async () => {},
 });
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<iUser | null>(null);
   const [loading, setLoading] = useState<tLoading>('loading');
-  const router = useRouter();
 
   useEffect(() => {
     (async () => {
@@ -49,19 +53,25 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     })();
   }, []);
 
-  const login = async (u: iUser, remember: boolean) => {
-    if (u) {
-      if (remember) await setToken(u.jwt);
-      setUser(u);
+  const login = async (
+    identifier: string,
+    password: string,
+    remember: boolean
+  ) => {
+    const res = await logaUsuario({ identifier, password });
+    if (res.status === 'success') {
+      if (remember) await setToken(res.data?.jwt as string);
+      setUser(res.data);
       setLoading('authenticated');
     }
+    return res;
   };
 
   const logout = async () => {
     await removeToken();
     setUser(null);
     setLoading('unauthenticated');
-    router.refresh();
+    window.location.reload();
   };
 
   return (

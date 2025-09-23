@@ -1,6 +1,5 @@
 'use client';
 
-import logaUsuario from '@/actions/login';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -60,12 +59,9 @@ const Login = () => {
       identifier: form.email as string,
       password: form.senha as string,
     };
-    const res = await logaUsuario(data);
+    const res = await auth.login(data.identifier, data.password, form.remember);
     setRes(res);
     if (res.status === 'success') {
-      if (res.data) {
-        auth.login(res.data, form.remember);
-      }
       router.push('/');
     }
   };
