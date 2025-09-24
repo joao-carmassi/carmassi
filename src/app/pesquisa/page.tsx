@@ -12,6 +12,7 @@ import {
 import CampoBuscaPesquisa from './campoBuscaPesquisa';
 import { H1 } from '@/components/ui/h1';
 import slugifyPathern from '@/utils/slugifyPathern';
+import Link from 'next/link';
 
 interface Props {
   searchParams: Promise<{
@@ -50,7 +51,9 @@ const PaginaPesquisa = async ({ searchParams }: Props) => {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+              <BreadcrumbLink asChild>
+                <Link href={'/'}>Home</Link>
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>

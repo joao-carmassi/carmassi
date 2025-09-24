@@ -54,11 +54,15 @@ const PaginaCompraProduto = async ({ params }: Props) => {
         <Breadcrumb className='pb-3'>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+              <BreadcrumbLink asChild>
+                <Link href={'/'}>Home</Link>
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href='/produtos'>Produtos</BreadcrumbLink>
+              <BreadcrumbLink asChild>
+                <Link href='/produtos'>Produtos</Link>
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>

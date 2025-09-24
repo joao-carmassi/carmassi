@@ -1,3 +1,4 @@
+import { getToken } from '@/actions/auth';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -18,7 +19,9 @@ import { H3 } from '@/components/ui/h3';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useAuth } from '@/context/AuthContext';
+import { iApiResponse } from '@/interface/iApiResponse';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import z from 'zod';
 
@@ -28,7 +31,7 @@ const schemaName = z.object({
     .string()
     .min(3, { message: 'Nome de usuario deve ter pelo menos 3 caracteres' })
     .max(20, { message: 'Nome de usuario deve ter no máximo 20 caracteres' })
-    .regex(/^[a-zA-Z0-9_]+$/, {
+    .regex(/^[\p{L}0-9-_ ]+$/u, {
       message: 'Nome de usuario só pode ter letras, números e _',
     }),
 });
@@ -63,17 +66,33 @@ const CardEmail = () => {
 };
 
 const CardName = () => {
-  const { user } = useAuth();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [res, setRes] = useState<iApiResponse | null>(null);
+  const { user, login } = useAuth();
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<tName>({
     resolver: zodResolver(schemaName),
   });
 
-  const handleName = (data: tName) => {
-    console.log(data);
+  const handleName = async (data: tName) => {
+    const token = await getToken();
+    if (!user) return;
+
+    const apiRes = await login(
+      user.user.email,
+      data.pass,
+      token ? true : false
+    );
+    setRes(apiRes);
+
+    if (apiRes.status === 'success') {
+      setModalOpen(false);
+      reset();
+    }
   };
 
   return (
@@ -88,7 +107,7 @@ const CardName = () => {
         <p className='bg-background py-1.5 px-3'>{user?.user.username}</p>
       </CardContent>
       <CardFooter className='px-5 flex justify-end'>
-        <Dialog>
+        <Dialog open={modalOpen} onOpenChange={setModalOpen}>
           <DialogTrigger asChild>
             <Button variant={'ghost'} size={'sm'}>
               Editar
@@ -116,6 +135,13 @@ const CardName = () => {
                       {errors.pass?.message}
                     </span>
                   )}
+                  {res?.status === 'error' && (
+                    <span>
+                      <p className='text-sm text-red-500'>
+                        {res.errorMessage?.message}
+                      </p>
+                    </span>
+                  )}
                 </div>
                 <div className='grid w-full items-center gap-2'>
                   <Label className='text-muted-foreground' htmlFor='username'>
@@ -135,8 +161,19 @@ const CardName = () => {
                   )}
                 </div>
               </div>
-              <div className='flex justify-end'>
+              <div className='flex gap-3 justify-end'>
                 <Button>Salvar</Button>
+                <Button
+                  onClick={() => {
+                    setModalOpen(false);
+                    reset();
+                    setRes(null);
+                  }}
+                  variant={'outline'}
+                  type='button'
+                >
+                  Cancelar
+                </Button>
               </div>
             </form>
           </DialogContent>
@@ -147,16 +184,33 @@ const CardName = () => {
 };
 
 const CardPassword = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [res, setRes] = useState<iApiResponse | null>(null);
+  const { user, login } = useAuth();
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<tPass>({
     resolver: zodResolver(schemaPass),
   });
 
-  const handlePass = (data: tPass) => {
-    console.log(data);
+  const handlePass = async (data: tPass) => {
+    const token = await getToken();
+    if (!user) return;
+
+    const apiRes = await login(
+      user.user.email,
+      data.oldPass,
+      token ? true : false
+    );
+    setRes(apiRes);
+
+    if (apiRes.status === 'success') {
+      setModalOpen(false);
+      reset();
+    }
   };
 
   return (
@@ -171,7 +225,7 @@ const CardPassword = () => {
         <p className='bg-background py-1.5 px-3'>********</p>
       </CardContent>
       <CardFooter className='px-5 flex justify-end'>
-        <Dialog>
+        <Dialog open={modalOpen} onOpenChange={setModalOpen}>
           <DialogTrigger asChild>
             <Button variant={'ghost'} size={'sm'}>
               Editar
@@ -199,6 +253,13 @@ const CardPassword = () => {
                       {errors.oldPass?.message}
                     </span>
                   )}
+                  {res?.status === 'error' && (
+                    <span>
+                      <p className='text-sm text-red-500'>
+                        {res.errorMessage?.message}
+                      </p>
+                    </span>
+                  )}
                 </div>
                 <div className='grid w-full items-center gap-2'>
                   <Label className='text-muted-foreground' htmlFor='newPass'>
@@ -218,8 +279,19 @@ const CardPassword = () => {
                   )}
                 </div>
               </div>
-              <div className='flex justify-end'>
+              <div className='flex gap-3 justify-end'>
                 <Button>Salvar</Button>
+                <Button
+                  onClick={() => {
+                    setModalOpen(false);
+                    reset();
+                    setRes(null);
+                  }}
+                  variant={'outline'}
+                  type='button'
+                >
+                  Cancelar
+                </Button>
               </div>
             </form>
           </DialogContent>

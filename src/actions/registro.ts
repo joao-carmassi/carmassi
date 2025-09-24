@@ -10,7 +10,7 @@ const schema = z.object({
     .string()
     .min(3, { message: 'Nome de usuario deve ter pelo menos 3 caracteres' })
     .max(20, { message: 'Nome de usuario deve ter no máximo 20 caracteres' })
-    .regex(/^[a-zA-Z0-9_]+$/, {
+    .regex(/^[\p{L}0-9-_ ]+$/u, {
       message: 'Nome de usuario só pode ter letras, números e _',
     }),
   email: z.string().email({ message: 'Email inválido' }),

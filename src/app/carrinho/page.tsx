@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/breadcrumb';
 import TableProdutosCarrinho from './tableProdutosCarrinho';
 import { H1 } from '@/components/ui/h1';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Carrinho | Carmassi',
@@ -21,7 +22,9 @@ const PaginaCarrinho = () => {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+              <BreadcrumbLink asChild>
+                <Link href={'/'}>Home</Link>
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>

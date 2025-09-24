@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { H1 } from '@/components/ui/h1';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Produtos | Carmassi',
@@ -32,7 +33,9 @@ const PageProdutos = async ({ searchParams }: Props) => {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+              <BreadcrumbLink asChild>
+                <Link href={'/'}>Home</Link>
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>

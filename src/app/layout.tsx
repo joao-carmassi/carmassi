@@ -51,14 +51,17 @@ export default function RootLayout({
 
 /* TODO:
   ?- Pagina edita dados perfile
+  ?- Alterar Carmassi => Carmassi Store
   ?- layout paginas login, register, perfil e produtos
   ?- animacao perfil e produtos
   ?- validacao de email
   ?- input senha
   ?- Verificar msg de erro de resposta do servidor
   ?- Trocar msgs do servidor para pt
+  ?- notificacoes de adicionar produto carrinho e troca de dados perfil
+  ?- Api correios
   ?- Alterar esstrutura dados produtos
   ?- Troca produtos pro CMS
-  ?- Armazenar dados produtos usario cms
+  ?- Armazenar pedidos usario cms
   *- Sistema de pagamento e notificacao por zapp
 */

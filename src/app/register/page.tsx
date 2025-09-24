@@ -21,14 +21,15 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import registraUsuario from '@/actions/registro';
 import { motion, Variants } from 'framer-motion';
+import Logo from '@/components/logo';
 
 const schema = z.object({
   username: z
     .string()
     .min(3, { message: 'Nome de usuario deve ter pelo menos 3 caracteres' })
     .max(20, { message: 'Nome de usuario deve ter no máximo 20 caracteres' })
-    .regex(/^[a-zA-Z0-9_]+$/, {
-      message: 'Nome de usuario só pode ter letras, números e _',
+    .regex(/^[\p{L}0-9-_ ]+$/u, {
+      message: 'Nome de usuario só pode ter letras, números, espaços e _',
     }),
   email: z.string().email({ message: 'Email inválido' }),
   password: z
@@ -79,8 +80,8 @@ const Register = () => {
       >
         <Card className='shadow-lg border-border/50 rounded-none py-8'>
           <CardHeader className='text-center gap-4'>
-            <CardDescription className='mx-auto'>
-              <span className='block w-10 h-10 rounded-full bg-foreground' />
+            <CardDescription className='mx-auto text-secondary'>
+              <Logo />
             </CardDescription>
             <CardTitle>
               <H1>Cadastre-se</H1>

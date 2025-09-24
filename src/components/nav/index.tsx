@@ -136,9 +136,9 @@ export default function Navbar({ categorias }: Props) {
           </Popover>
           {/* Main nav */}
           <div className='flex items-center gap-6'>
-            <Link href='/' className='text-primary hover:text-primary/90'>
+            <span className='text-secondary'>
               <Logo />
-            </Link>
+            </span>
             {/* Navigation menu */}
             <NavigationMenu viewport={false} className='max-md:hidden'>
               <NavigationMenuList className='gap-2'>

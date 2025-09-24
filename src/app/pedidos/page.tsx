@@ -10,6 +10,7 @@ import {
 import { H1 } from '@/components/ui/h1';
 import { Spinner } from '@/components/ui/kibo-ui/spinner';
 import { useAuth } from '@/context/AuthContext';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 const Perfil = () => {
@@ -25,7 +26,9 @@ const Perfil = () => {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+              <BreadcrumbLink asChild>
+                <Link href={'/'}>Home</Link>
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>

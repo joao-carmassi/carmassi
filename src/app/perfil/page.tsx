@@ -14,6 +14,7 @@ import {
   BreadcrumbPage,
 } from '@/components/ui/breadcrumb';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const Perfil = () => {
   const { loading } = useAuth();
@@ -27,7 +28,9 @@ const Perfil = () => {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+              <BreadcrumbLink asChild>
+                <Link href={'/'}>Home</Link>
+              </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>

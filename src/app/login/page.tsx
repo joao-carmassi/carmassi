@@ -23,6 +23,7 @@ import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import z from 'zod';
 import { motion } from 'framer-motion';
+import Logo from '@/components/logo';
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -79,8 +80,8 @@ const Login = () => {
       >
         <Card className='shadow-lg border-border/50 rounded-none py-8'>
           <CardHeader className='text-center gap-4'>
-            <CardDescription className='mx-auto'>
-              <span className='block w-10 h-10 rounded-full bg-foreground' />
+            <CardDescription className='mx-auto text-secondary'>
+              <Logo />
             </CardDescription>
             <CardTitle>
               <H1>Bem-vindo de volta</H1>

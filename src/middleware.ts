@@ -14,5 +14,5 @@ export async function middleware(req: NextRequest) {
 
 // Define quais rotas o middleware vai proteger
 export const config = {
-  matcher: ['/perfil/:path*', '/pedidos/:path*'],
+  matcher: ['/perfil', '/pedidos'],
 };
